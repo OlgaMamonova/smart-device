@@ -1,0 +1,54 @@
+.button {
+  display: inline-flex;
+  padding: 15px 25px;
+
+  color: $color-alice-blue;
+
+  background-color: $color-deep-sky-blue;
+  color: $color-alice-blue;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+  &--call-me {
+    background-color: $color-black-pearl;
+    color: $color-alice-blue;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid $color-whisper;
+    padding: 10px 15px;
+  }
+
+  &--show-more {
+    background-color: $color-whisper;
+    color: $color-deep-sky-blue;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid $color-deep-sky-blue;
+    padding: 14px 13px 8px 12px;
+  }
+
+  &--ask-question {
+    background-color: $color-black-pearl;
+    color: $color-whisper;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  transition: opacity $trans-default;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
