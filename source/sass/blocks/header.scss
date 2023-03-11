@@ -2,6 +2,11 @@
   background-color: transparent;
   background-image: $black-pearl-to-bottom;
   padding: 30px 0 35px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 
   @include vp-1023 {
     padding: 20px 0 25px 0;
