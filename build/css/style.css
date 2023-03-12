@@ -429,7 +429,7 @@ html {
   font-size: 16px;
   line-height: 22px;
   font-family: "PT Mono", "Times New Roman", serif;
-  color: #e5e5e5;
+  color: #ebebeb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -655,12 +655,12 @@ button,
   color: #f2f5f6;
   font-size: 14px;
   line-height: 16px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #ebebeb;
   padding: 10px 15px;
 }
 
 .button--show-more {
-  background-color: #e5e5e5;
+  background-color: #ebebeb;
   color: #00b2ff;
   font-size: 14px;
   line-height: 16px;
@@ -670,7 +670,7 @@ button,
 
 .button--ask-question {
   background-color: #041827;
-  color: #e5e5e5;
+  color: #ebebeb;
   font-size: 16px;
   line-height: 19px;
 }
@@ -787,6 +787,7 @@ button,
 .presentation__wrapper p {
   font-size: 22px;
   line-height: 34px;
+  margin: 0;
   margin-bottom: 40px;
   width: 70.1%;
 }
@@ -804,6 +805,53 @@ button,
 
 .presentation__button--mobile {
   display: none;
+}
+
+.advantages {
+  background-color: #ebebeb;
+  color: #041827;
+  padding-top: 120px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.advantages__icon {
+  color: #00b2ff;
+  margin-bottom: 20px;
+}
+
+.advantages__item {
+  padding: 40px 45px 35px 40px;
+  min-height: 300px;
+  border: 1px solid #e5e5e5;
+  border-left: 5px solid #00b2ff;
+}
+
+.advantages__item:hover .advantages__icon,
+.advantages__item:hover .advantages__title {
+  color: #f2f5f6;
+}
+
+.advantages__item h3 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00b2ff;
+}
+
+.advantages__item p {
+  margin: 0;
 }
 
 .modal {
@@ -1518,6 +1566,10 @@ button,
   .presentation__button {
     margin-left: 6.9%;
   }
+
+  .advantages {
+    padding-top: 80px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1568,6 +1620,30 @@ button,
 
   .presentation__button--desktop {
     display: none;
+  }
+
+  .advantages {
+    padding-top: 50px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__item {
+    padding: 30px 30px 56px 30px;
+    min-height: 270px;
+  }
+
+  .advantages__item h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages__item p {
+    font-size: 14px;
+    line-height: 19px;
   }
 
   .modal__wrapper {
@@ -1658,6 +1734,12 @@ button,
 
   .header__contact-link:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .advantages__item:hover:not(.focus-visible) {
+    color: #f2f5f6;
+    border-color: #00b2ff;
+    background-color: #00b2ff;
   }
 
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {
