@@ -1546,6 +1546,7 @@ button,
 
   .presentation {
     padding: 180px 0 205px;
+    background-image: url("../../img/background/presentation-tablet.jpg");
   }
 
   .presentation__title {
@@ -1569,6 +1570,13 @@ button,
 
   .advantages {
     padding-top: 80px;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
+  .presentation {
+    background-image: url("../../img/background/presentation-tablet@2x.jpg");
+    background-position: -123px 0;
   }
 }
 
@@ -1597,6 +1605,8 @@ button,
 
   .presentation {
     padding: 150px 0 190px;
+    background-image: url("../../img/background/presentation-mobile.jpg");
+    background-position: -229px 0;
   }
 
   .presentation__title {
@@ -1657,6 +1667,12 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .presentation {
+    background-image: url("../../img/background/presentation-mobile@2x.jpg");
   }
 }
 
