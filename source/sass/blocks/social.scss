@@ -1,0 +1,34 @@
+.social {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-1023 {
+    max-width: 50%;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}
+
+.social__item {
+  margin-bottom: 15px;
+
+  &:not(:last-of-type) {
+    margin-right: 15px;
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}

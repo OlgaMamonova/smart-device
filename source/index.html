@@ -240,10 +240,10 @@
                 <div>
                   <label class="visually-hidden" for="name">Ваше имя</label>
                   <input id="name" type="text" placeholder="Имя" />
-                  <label class="visually-hidden" for="name"
+                  <label class="visually-hidden" for="phone"
                     >Номер телефона</label
                   >
-                  <input id="name" type="text" placeholder="Телефон" />
+                  <input id="phone" type="text" placeholder="Телефон" />
                 </div>
                 <label class="visually-hidden" for="question">Ваш вопрос</label>
                 <textarea
@@ -269,8 +269,8 @@
       </main>
       <footer class="footer">
         <h2 class="visually-hidden">Навигация по сайту и ссылки на нас</h2>
-        <div class="container footer-wrapper">
-          <div class="footer__icon-links">
+        <div class="container container--mobile-no footer__wrapper">
+          <div class="footer__icon-links container container--mobile-only">
             <a href="#" class="footer__logo-link">
               <img
                 class="footer__logo-img"
@@ -322,8 +322,8 @@
               </li>
             </ul>
           </div>
-          <div class="footer__info-link">
-            <section class="footer__nav">
+          <div class="footer__info-links">
+            <section class="footer__nav container container--mobile-only">
               <h3 class="footer__section-title">Разделы сайта</h3>
               <ul class="footer__nav-list">
                 <li class="footer__nav-item">
@@ -351,7 +351,9 @@
                 </li>
               </ul>
             </section>
-            <section class="footer__ofice-info">
+            <section
+              class="footer__ofice-info container container--mobile-only"
+            >
               <h3 class="footer__section-title">Наш офис</h3>
               <address class="footer__address">
                 г. Мытищи, Олимпийский проспект, д.10
