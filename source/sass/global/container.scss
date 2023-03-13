@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  min-width: 320px;
   max-width: 1318px;
   margin: 0 auto;
   padding: 0 49px;
@@ -12,14 +11,6 @@
   &--mobile-no {
     @include vp-767 {
       padding: 0;
-    }
-  }
-
-  &--mobile-only {
-    padding: 0;
-
-    @include vp-767 {
-      padding: 0 25px;
     }
   }
 }
