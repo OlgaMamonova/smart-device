@@ -916,11 +916,9 @@ button,
   margin-bottom: 30px;
 }
 
-.footer__accordion-button {
+.footer__title {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
-  background-color: transparent;
-  border: none;
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 1px;
@@ -928,6 +926,44 @@ button,
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
+}
+
+.footer__accordion-button {
+  display: none;
+}
+
+.footer__accordion-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  width: 15px;
+  height: 1px;
+  background-color: #f2f5f6;
+}
+
+.footer__accordion-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 1px;
+  height: 15px;
+  background-color: #f2f5f6;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.is-active > .footer__accordion-button::after {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .footer__nav {
@@ -1918,17 +1954,31 @@ button,
     margin-bottom: 15px;
   }
 
+  .footer__title {
+    display: none;
+  }
+
   .footer__accordion-button {
+    display: block;
+    position: relative;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
     width: 100%;
     text-align: left;
-    line-height: 18px;
-    padding: 20px 0 20px;
+    padding: 21px 0 21px;
     cursor: pointer;
-    margin-bottom: 0;
   }
 
   .footer__nav {
-    padding-top: 20px;
+    padding-top: 0;
     width: 100%;
     margin: 0 auto;
     padding: 0 25px;
@@ -1947,6 +1997,14 @@ button,
     border-bottom: 1px solid #f2f5f6;
   }
 
+  .footer__ofice-info-wrapper {
+    margin-top: -5px;
+  }
+
+  .footer__nav-list {
+    margin-top: -5px;
+  }
+
   .footer__phone-list {
     margin-bottom: 13px;
   }
@@ -1954,7 +2012,7 @@ button,
   .footer__address {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
   .footer__phone-link {
