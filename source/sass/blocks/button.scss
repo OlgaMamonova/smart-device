@@ -1,5 +1,5 @@
 .button {
-  display: inline-flex;
+  display: inline-block;
   padding: 17px 27px;
   border-radius: 3px;
 
@@ -34,12 +34,12 @@
   }
 
   &--show-more {
-    background-color: $color-whisper;
+    background-color: $color-alice-blue;
     color: $color-deep-sky-blue;
     font-size: 14px;
     line-height: 16px;
     border: 1px solid $color-deep-sky-blue;
-    padding: 14px 13px 8px 12px;
+    padding: 14px 13px 14px 12px;
   }
 
   &--feedback {

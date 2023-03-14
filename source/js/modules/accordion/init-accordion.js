@@ -1,4 +1,4 @@
-import { Accordions } from "./accordions";
+import {Accordions} from './accordions';
 let accordions;
 
 const initAccordions = () => {
@@ -6,4 +6,4 @@ const initAccordions = () => {
   window.accordions = accordions;
 };
 
-export { initAccordions, accordions };
+export {initAccordions, accordions};

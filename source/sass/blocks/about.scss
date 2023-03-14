@@ -1,0 +1,58 @@
+.about {
+  background-color: $color-alice-blue;
+  color: $color-black-pearl;
+  padding: 60px 0 100px;
+
+  @include vp-1023 {
+    padding: 40px 0 80px;
+  }
+
+  @include vp-767 {
+    padding: 25px 0 80px;
+  }
+}
+
+.about__wrapper {
+  background-image: url("../../img/background/2022.png");
+  background-repeat: no-repeat;
+  background-size: 150px 320px;
+
+  @include retina {
+    background-image: url("../../img/background/2022@2x.png");
+  }
+
+  @include vp-767 {
+    background-image: none;
+  }
+}
+
+.about__content-wrapper {
+  margin-left: auto;
+  width: 79.51%;
+
+  @include vp-1023 {
+    width: 73.88%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.about__wrapper p {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__button {
+  min-width: 180px;
+
+  @include vp-767 {
+    min-width: 57.14%;
+  }
+}

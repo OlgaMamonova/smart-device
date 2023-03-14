@@ -1,0 +1,15 @@
+.title {
+  font-family: $ff-roboto-condensed;
+  color: $color-default-white;
+  font-size: 36px;
+  line-height: 51px;
+
+  &--black {
+    color: $color-black-pearl;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
