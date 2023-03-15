@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {scrollSmooth} from './modules/smooth-to-anchor';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {showMore} from './modules/show-more-about';
 
 // ---------------------------------
 
@@ -12,7 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   scrollSmooth();
+  showMore();
   initAccordions();
+
 
   // Modules
   // ---------------------------------
@@ -21,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    showMore();
+    initAccordions();
     const form = new Form();
     window.form = form;
     form.init();

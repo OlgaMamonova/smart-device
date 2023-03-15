@@ -78,7 +78,8 @@
   }
 }
 
-.about__wrapper--no-js .about__added-text {
+.about__wrapper--no-js .about__added-text,
+.about__wrapper-added-text .about__added-text {
   display: block;
 }
 
@@ -86,9 +87,9 @@
   display: none;
 }
 
-.about__wrapper--no-js .about__added-text-mobile {
+.about__wrapper--no-js .about__added-text-mobile,
+.about__wrapper-added-text .about__added-text-mobile {
   @include vp-767 {
     display: inline;
   }
 }
-
