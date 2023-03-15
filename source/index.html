@@ -25,45 +25,47 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container header__wrapper">
-          <a href="#" class="header__logo-link">
-            <picture>
-              <source
-                media="(max-width: 767px)"
-                srcset="img/svg/logo-mobile.svg"
-              />
-              <img
-                class="header__logo-img"
-                src="img/svg/logo.svg"
-                width="215"
-                height="55"
-                alt="Логотип компании Smart Device."
-              />
-            </picture>
-          </a>
-          <ul class="header__contact-list">
-            <li class="header__contact-item">
-              <a
-                class="header__contact-link header__contact-link--mail"
-                href="mailto:info@sd.ru"
-                aria-label="Написать нам"
-              >
-                <span class="header__contact-capture">info@sd.ru</span>
-              </a>
-            </li>
-            <li class="header__contact-item">
-              <a
-                class="header__contact-link header__contact-link--phone"
-                href="tel:+74950005252"
-                aria-label="Позвонить нам"
-              >
-                <span class="header__contact-capture">+7 (495) 000 52 52</span>
-              </a>
-            </li>
-          </ul>
-          <button class="header__button button button--call-me" type="button">
-            Заказать звонок
-          </button>
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="#" class="header__logo-link">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/svg/logo-mobile.svg"
+                />
+                <img
+                  class="header__logo-img"
+                  src="img/svg/logo.svg"
+                  width="215"
+                  height="55"
+                  alt="Логотип компании Smart Device."
+                />
+              </picture>
+            </a>
+            <ul class="header__contact-list">
+              <li class="header__contact-item">
+                <a
+                  class="header__contact-link header__contact-link--mail"
+                  href="mailto:info@sd.ru"
+                  aria-label="Написать нам"
+                >
+                  <span class="header__contact-capture">info@sd.ru</span>
+                </a>
+              </li>
+              <li class="header__contact-item">
+                <a
+                  class="header__contact-link header__contact-link--phone"
+                  href="tel:+74950005252"
+                  aria-label="Позвонить нам"
+                >
+                  <span class="header__contact-capture">+7 (495) 000 52 52</span>
+                </a>
+              </li>
+            </ul>
+            <button class="header__button button button--call-me" type="button">
+              Заказать звонок
+            </button>
+          </div>
         </div>
       </header>
       <main class="main">
@@ -83,7 +85,7 @@
                   Получить бесплатную консультацию
                 </a>
                 <a
-                  class="presentation__button presentation__button--mobile button"
+                  class="presentation__button presentation__button--mobile button focus-visible"
                   href="#feedback"
                 >
                   Бесплатная консультация
@@ -222,7 +224,7 @@
             </h2>
             <ul class="goods__list">
               <li class="goods__item">
-                <a class="goods__link" href="#">
+                <a class="goods__link goods__link--production" href="#">
                   <h3>
                     Производство<br />
                     печатных плат
@@ -230,7 +232,7 @@
                 </a>
               </li>
               <li class="goods__item">
-                <a class="goods__link" href="#">
+                <a class="goods__link goods__link--montage" href="#">
                   <h3>
                     Монтаж<br />
                     печатных плат
@@ -238,7 +240,7 @@
                 </a>
               </li>
               <li class="goods__item">
-                <a class="goods__link" href="#">
+                <a class="goods__link goods__link--details" href="#">
                   <h3>
                     Комплектующие<br />
                     для светотехники
@@ -250,39 +252,42 @@
         </section>
         <section class="feedback" id="feedback">
           <div class="container">
-            <h2 class="feedback__title title">
-              Остались вопросы? Задайте их нам!
-            </h2>
-            <p>Мы проконсультируем Вас бесплатно</p>
-            <div class="feedback__form">
-              <form action="https://echo.htmlacademy.ru/" method="get">
-                <div>
-                  <label class="visually-hidden" for="name">Ваше имя</label>
-                  <input id="name" type="text" placeholder="Имя" />
-                  <label class="visually-hidden" for="phone"
-                    >Номер телефона</label
-                  >
-                  <input id="phone" type="text" placeholder="Телефон" />
-                </div>
-                <label class="visually-hidden" for="question">Ваш вопрос</label>
-                <textarea
-                  placeholder="Ваш вопрос"
-                  id="question"
-                  name="question"
-                  rows="4"
-                ></textarea>
-                <div>
-                  <button type="submit">Задать вопрос</button>
+            <div class="feedback__wrapper">
+              <h2 class="feedback__title title">
+                Остались вопросы? Задайте их нам!
+              </h2>
+              <p>Мы проконсультируем Вас бесплатно</p>
 
-                  <label>
-                    <input type="checkbox" name="accept" checked required />
-                    <span>
-                      Я&nbsp;согласен на&nbsp;обработку персональных данных
-                    </span>
-                  </label>
-                </div>
-              </form>
+                <form action="https://echo.htmlacademy.ru/" method="get">
+                  <div>
+                    <label class="visually-hidden" for="name">Ваше имя</label>
+                    <input id="name" type="text" placeholder="Имя" />
+                    <label class="visually-hidden" for="phone"
+                      >Номер телефона</label
+                    >
+                    <input id="phone" type="text" placeholder="Телефон" />
+                  </div>
+                  <label class="visually-hidden" for="question">Ваш вопрос</label>
+                  <textarea
+                    placeholder="Ваш вопрос"
+                    id="question"
+                    name="question"
+                    rows="4"
+                  ></textarea>
+                  <div>
+                    <button type="submit">Задать вопрос</button>
+
+                    <label>
+                      <input type="checkbox" name="accept" checked required />
+                      <span>
+                        Я&nbsp;согласен на&nbsp;обработку персональных данных
+                      </span>
+                    </label>
+                  </div>
+                </form>
+              </div>
             </div>
+
           </div>
         </section>
       </main>

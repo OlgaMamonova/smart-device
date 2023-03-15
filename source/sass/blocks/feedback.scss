@@ -1,3 +1,28 @@
 .feedback {
+  position: relative;
   background-color: $color-deep-sky-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: $color-black-pearl;
+    opacity: 0.5;
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+
+    @include vp-1023 {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+.feedback__wrapper {
+  width: 50%;
+  margin-left: auto;
 }
