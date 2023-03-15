@@ -40,6 +40,10 @@
     line-height: 16px;
     border: 1px solid $color-deep-sky-blue;
     padding: 14px 13px 14px 12px;
+
+    @include vp-767 {
+      padding: 9px 12px;
+    }
   }
 
   &--feedback {

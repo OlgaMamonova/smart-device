@@ -120,7 +120,7 @@
   }
 }
 
-.is-active > .footer__accordion-button::after {
+.is-active .footer__accordion-button::after {
   transform: translateY(-50%) rotate(90deg);
 }
 

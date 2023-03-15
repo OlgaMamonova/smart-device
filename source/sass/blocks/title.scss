@@ -1,8 +1,9 @@
 .title {
   font-family: $ff-roboto-condensed;
-  color: $color-default-white;
+  color: $color-white;
   font-size: 36px;
   line-height: 51px;
+  margin: 0;
 
   &--black {
     color: $color-black-pearl;
