@@ -624,6 +624,7 @@ button,
 .container {
   width: 100%;
   max-width: 1318px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 49px;
 }
@@ -706,7 +707,8 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
   font-size: 36px;
-  line-height: 51px;
+  line-height: 50px;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -938,7 +940,7 @@ button,
 }
 
 .goods {
-  padding: 70px 0 140px;
+  padding: 67px 0 140px;
 }
 
 .goods__title {
@@ -963,7 +965,7 @@ button,
 .goods__link {
   display: block;
   padding: 50px 80px 50px 40px;
-  min-height: 650px;
+  min-height: 653px;
   background-color: rgba(255, 255, 255, 0.7);
   position: relative;
   background-repeat: no-repeat;
@@ -1008,6 +1010,7 @@ button,
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  margin: 0;
 }
 
 .feedback {
@@ -1975,7 +1978,11 @@ button,
   }
 
   .goods {
-    padding: 60px 0 75px;
+    padding: 56px 0 75px;
+  }
+
+  .goods__title {
+    margin-bottom: 39px;
   }
 
   .goods__list {
@@ -1985,6 +1992,7 @@ button,
   }
 
   .goods__link {
+    padding: 37px 45px 45px;
     min-height: 250px;
   }
 
@@ -2079,7 +2087,6 @@ button,
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
-    min-width: 320px;
   }
 
   .container--mobile-no {
@@ -2206,11 +2213,11 @@ button,
   }
 
   .goods {
-    padding: 50px 0 86px;
+    padding: 46px 0 86px;
   }
 
   .goods__title {
-    margin-bottom: 40px;
+    margin-bottom: 29px;
   }
 
   .goods__title--desktop {
@@ -2219,6 +2226,10 @@ button,
 
   .goods__title--mobile {
     display: block;
+  }
+
+  .goods__link {
+    padding: 26px 45px 45px 30px;
   }
 
   .goods__link::before {
@@ -2246,7 +2257,7 @@ button,
   }
 
   .goods__link h3 {
-    font-style: 18px;
+    font-size: 18px;
   }
 
   .footer {
