@@ -52,10 +52,11 @@
   display: block;
   padding: 50px 80px 50px 40px;
   min-height: 653px;
-  background-color: $color-white-opacity;
+  background-color: $color-black-pearl;
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  z-index: 0;
 
   @include vp-1023 {
     padding: 37px 45px 45px;
@@ -89,7 +90,6 @@
     position: absolute;
     bottom: 31px;
     right: 28px;
-    z-index: 3;
 
     @include vp-767 {
       height: 5px;
@@ -100,77 +100,92 @@
   }
 }
 
-.goods__link--production {
-  background-image: url("../../img/background/good1-desktop.jpg");
+// .goods__link:hover .goods__link::before {
+//   background-color: red;
+// }
 
-  @include desktop-retina {
-    background-image: url("../../img/background/good1-desktop@2x.jpg");
-  }
-
-  @include vp-1023 {
-    background-image: url("../../img/background/good1-tablet.jpg");
-  }
-
-  @include vp-1023-retina {
-    background-image: url("../../img/background/good1-tablet@2x.jpg");
-  }
-
-  @include vp-767 {
-    background-image: url("../../img/background/good1-mobile.jpg");
-  }
-
-  @include vp-767-retina {
-    background-image: url("../../img/background/good1-mobile@2x.jpg");
-  }
+.goods__link img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.goods__link--montage {
-  background-image: url("../../img/background/good2-desktop.jpg");
+// .goods__link--production {
+//   background-image: url("../../img/background/good1-desktop.jpg");
 
-  @include desktop-retina {
-    background-image: url("../../img/background/good2-desktop@2x.jpg");
-  }
+//   @include desktop-retina {
+//     background-image: url("../../img/background/good1-desktop@2x.jpg");
+//   }
 
-  @include vp-1023 {
-    background-image: url("../../img/background/good2-tablet.jpg");
-  }
+//   @include vp-1023 {
+//     background-image: url("../../img/background/good1-tablet.jpg");
+//   }
 
-  @include vp-1023-retina {
-    background-image: url("../../img/background/good2-tablet@2x.jpg");
-  }
+//   @include vp-1023-retina {
+//     background-image: url("../../img/background/good1-tablet@2x.jpg");
+//   }
 
-  @include vp-767 {
-    background-image: url("../../img/background/good2-mobile.jpg");
-  }
+//   @include vp-767 {
+//     background-image: url("../../img/background/good1-mobile.jpg");
+//   }
 
-  @include vp-767-retina {
-    background-image: url("../../img/background/good2-mobile@2x.jpg");
-  }
-}
+//   @include vp-767-retina {
+//     background-image: url("../../img/background/good1-mobile@2x.jpg");
+//   }
+// }
 
-.goods__link--details {
-  background-image: url("../../img/background/good3-desktop.jpg");
+// .goods__link--montage {
+//   background-image: url("../../img/background/good2-desktop.jpg");
 
-  @include desktop-retina {
-    background-image: url("../../img/background/good3-desktop@2x.jpg");
-  }
+//   @include desktop-retina {
+//     background-image: url("../../img/background/good2-desktop@2x.jpg");
+//   }
 
-  @include vp-1023 {
-    background-image: url("../../img/background/good3-tablet.jpg");
-  }
+//   @include vp-1023 {
+//     background-image: url("../../img/background/good2-tablet.jpg");
+//   }
 
-  @include vp-1023-retina {
-    background-image: url("../../img/background/good3-tablet@2x.jpg");
-  }
+//   @include vp-1023-retina {
+//     background-image: url("../../img/background/good2-tablet@2x.jpg");
+//   }
 
-  @include vp-767 {
-    background-image: url("../../img/background/good3-mobile.jpg");
-  }
+//   @include vp-767 {
+//     background-image: url("../../img/background/good2-mobile.jpg");
+//   }
 
-  @include vp-767-retina {
-    background-image: url("../../img/background/good3-mobile@2x.jpg");
-  }
-}
+//   @include vp-767-retina {
+//     background-image: url("../../img/background/good2-mobile@2x.jpg");
+//   }
+// }
+
+// .goods__link--details {
+//   background-image: url("../../img/background/good3-desktop.jpg");
+
+//   @include desktop-retina {
+//     background-image: url("../../img/background/good3-desktop@2x.jpg");
+//   }
+
+//   @include vp-1023 {
+//     background-image: url("../../img/background/good3-tablet.jpg");
+//   }
+
+//   @include vp-1023-retina {
+//     background-image: url("../../img/background/good3-tablet@2x.jpg");
+//   }
+
+//   @include vp-767 {
+//     background-image: url("../../img/background/good3-mobile.jpg");
+//   }
+
+//   @include vp-767-retina {
+//     background-image: url("../../img/background/good3-mobile@2x.jpg");
+//   }
+// }
 
 .goods__link h3 {
   font-family: $ff-roboto-condensed;

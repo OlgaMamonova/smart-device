@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
   showMore();
   initAccordions();
 
-
   // Modules
   // ---------------------------------
 
@@ -24,8 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    showMore();
-    initAccordions();
     const form = new Form();
     window.form = form;
     form.init();

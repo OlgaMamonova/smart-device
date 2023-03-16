@@ -21,12 +21,15 @@ export class Accordions {
 
     evt.preventDefault();
     const parent = target.closest('[data-accordion="parent"]');
-
-    if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
+    if (
+      parent.dataset.destroy &&
+      !window.matchMedia(parent.dataset.destroy).matches
+    ) {
       return;
     }
 
     const element = target.closest('[data-accordion="element"]');
+    console.log(element);
     if (element.classList.contains('is-active')) {
       this.closeAccordion(element);
       return;
@@ -63,23 +66,33 @@ export class Accordions {
       return;
     }
 
-    const closeElements = document.querySelectorAll('[data-accordion="element"]:not(.is-active)');
+    const closeElements = document.querySelectorAll(
+        '[data-accordion="element"]:not(.is-active)'
+    );
 
     closeElements.forEach((closeElement) => {
       const parent = closeElement.closest('[data-accordion="parent"]');
       const content = closeElement.querySelector('[data-accordion="content"]');
-      if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
+      if (
+        parent.dataset.destroy &&
+        !window.matchMedia(parent.dataset.destroy).matches
+      ) {
         content.style.maxHeight = '100%';
         return;
       }
       content.style.maxHeight = null;
     });
 
-    const openElements = document.querySelectorAll('[data-accordion="element"].is-active');
+    const openElements = document.querySelectorAll(
+        '[data-accordion="element"].is-active'
+    );
     openElements.forEach((openElement) => {
       const content = openElement.querySelector('[data-accordion="content"]');
       const parent = openElement.closest('[data-accordion="parent"]');
-      if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
+      if (
+        parent.dataset.destroy &&
+        !window.matchMedia(parent.dataset.destroy).matches
+      ) {
         content.style.maxHeight = '100%';
         return;
       }
@@ -94,12 +107,18 @@ export class Accordions {
   fullUpdate(parent = null, transition = false) {
     let openElements;
     if (parent) {
-      openElements = parent.querySelectorAll('[data-accordion="element"].is-active');
+      openElements = parent.querySelectorAll(
+          '[data-accordion="element"].is-active'
+      );
     } else {
-      openElements = document.querySelectorAll('[data-accordion="element"].is-active');
+      openElements = document.querySelectorAll(
+          '[data-accordion="element"].is-active'
+      );
     }
     openElements.forEach((openElement) => {
-      const innerParent = openElement.querySelector('[data-accordion="parent"]');
+      const innerParent = openElement.querySelector(
+          '[data-accordion="parent"]'
+      );
       if (innerParent) {
         return;
       }
@@ -116,7 +135,6 @@ export class Accordions {
     if (parentElement.hasAttribute('data-single')) {
       this.closeAllAccordion(parentElement);
     }
-
     element.classList.add('is-active');
     if (transition) {
       contentElement.style.maxHeight = `${this._openHeight}px`;
@@ -129,7 +147,10 @@ export class Accordions {
     }
 
     if (parentElement.closest('[data-accordion="element"]')) {
-      this.openAccordion(parentElement.closest('[data-accordion="element"]'), transition);
+      this.openAccordion(
+          parentElement.closest('[data-accordion="element"]'),
+          transition
+      );
       return;
     }
 

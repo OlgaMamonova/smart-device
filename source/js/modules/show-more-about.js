@@ -2,6 +2,8 @@ const showMore = () => {
   const showMoreButton = document.querySelector('.about__button');
   const aboutSection = document.querySelector('.about__wrapper');
 
+  aboutSection.classList.remove('about__wrapper--no-js');
+
   const hideAddedText = () => {
     aboutSection.classList.remove('about__wrapper-added-text');
     showMoreButton.textContent = 'Подробнее';

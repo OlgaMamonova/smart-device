@@ -55,13 +55,16 @@
 
   transition: opacity $trans-default;
 
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
+  &:hover {
+    opacity: 0.8;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
   }
 }

@@ -27,7 +27,7 @@
       <header class="header">
         <div class="container">
           <div class="header__wrapper">
-            <a href="#" class="header__logo-link">
+            <a class="header__logo-link" href="#main">
               <picture>
                 <source
                   media="(max-width: 767px)"
@@ -58,17 +58,23 @@
                   href="tel:+74950005252"
                   aria-label="Позвонить нам"
                 >
-                  <span class="header__contact-capture">+7 (495) 000 52 52</span>
+                  <span class="header__contact-capture"
+                    >+7 (495) 000 52 52</span
+                  >
                 </a>
               </li>
             </ul>
-            <button class="header__button button button--call-me" type="button">
+            <a
+              class="header__button button button--call-me"
+              href="/"
+              data-open-modal="feedback"
+            >
               Заказать звонок
-            </button>
+            </a>
           </div>
         </div>
       </header>
-      <main class="main">
+      <main class="main" id="main">
         <section class="presentation">
           <div class="container">
             <div class="presentation__wrapper">
@@ -108,8 +114,8 @@
                 >
                   <use href="img/sprite.svg#clock"></use>
                 </svg>
-                <h3>Оперативные сроки</h3>
-                <p>
+                <h3 class="advantages__title">Оперативные сроки</h3>
+                <p class="advantages__description">
                   Усовершенствованная логистическая система позволяет нам
                   просчитывать стоимость, производить и&nbsp;доставлять заказы
                   плат и&nbsp;комплектующих в&nbsp;самые короткие сроки
@@ -125,8 +131,8 @@
                 >
                   <use href="img/sprite.svg#dealers"></use>
                 </svg>
-                <h3>Крупные поставщики</h3>
-                <p>
+                <h3 class="advantages__title">Крупные поставщики</h3>
+                <p class="advantages__description">
                   Нашими поставщиками являются такие крупные мировые компании
                   как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество
                   с&nbsp;такими компаниями обеспечивает хорошее качество нашей
@@ -143,8 +149,8 @@
                 >
                   <use href="img/sprite.svg#detective"></use>
                 </svg>
-                <h3>Полная конфиденциальность</h3>
-                <p>
+                <h3 class="advantages__title">Полная конфиденциальность</h3>
+                <p class="advantages__description">
                   По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную
                   конфиденциальность.
                 </p>
@@ -159,8 +165,8 @@
                 >
                   <use href="img/sprite.svg#tag"></use>
                 </svg>
-                <h3>Персонализация стоимости</h3>
-                <p>
+                <h3 class="advantages__title">Персонализация стоимости</h3>
+                <p class="advantages__description">
                   Мы&nbsp;подбираем определенную фабрику, поставщиков, вид
                   доставки, чтобы установить ту&nbsp;цену, которая Вас
                   устраивает.
@@ -172,7 +178,7 @@
         <section class="about" id="about">
           <div class="container">
             <!-- модификатор no-js при ошибки скрипта -->
-            <div class="about__wrapper">
+            <div class="about__wrapper about__wrapper--no-js">
               <h2 class="about__title title title--black">О&nbsp;компании</h2>
               <p>
                 Мы&nbsp;поставляем электронные комплектующие, производим
@@ -182,16 +188,19 @@
               </p>
               <p>
                 Наши поставщики&nbsp;&mdash; мировые производители электронных
-                компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="about__added-text-mobile">Печатные платы
-                  и&nbsp;комплектующие Service Devices применяются
-                  на&nbsp;предприятиях Российских Железных Дорог (РЖД),
-                  РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
-                  наших клиентов крупнейшие Производители светотехники России.</span>
+                компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                <span class="about__added-text-mobile"
+                  >Печатные платы и&nbsp;комплектующие Service Devices
+                  применяются на&nbsp;предприятиях Российских Железных Дорог
+                  (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
+                  Среди наших клиентов крупнейшие Производители светотехники
+                  России.</span
+                >
               </p>
               <div class="about__added-text">
                 <p>
-                  Smart Device&nbsp;&mdash; это команда профессионалов. Через нас
-                  прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70%
+                  Smart Device&nbsp;&mdash; это команда профессионалов. Через
+                  нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70%
                   из&nbsp;которых продолжают сотрудничество по&nbsp;сей день.
                   На&nbsp;данный момент насчитывается более 14&nbsp;офисов
                   по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
@@ -199,8 +208,8 @@
                 <p>
                   Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению
                   уровня качества продукции, производимой внутри компании.
-                  Использование инновационных технологий помогает экономить деньги
-                  и&nbsp;время наших клиентов.
+                  Использование инновационных технологий помогает экономить
+                  деньги и&nbsp;время наших клиентов.
                 </p>
               </div>
 
@@ -229,6 +238,46 @@
                     Производство<br />
                     печатных плат
                   </h3>
+                  <picture>
+                    <!-- <source
+                      type="image/webp"
+                      media="(min-width: 1440px)"
+                      srcset="
+                        img/catalog/fish1000-desktop.webp    1x,
+                        img/catalog/fish1000-desktop@2x.webp 2x
+                      " />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/catalog/fish1000-tablet.webp    1x,
+                        img/catalog/fish1000-tablet@2x.webp 2x
+                      " />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/catalog/fish1000-mobile.webp    1x,
+                        img/catalog/fish1000-mobile@2x.webp 2x
+                      " /> -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        img/goods/good1-mobile.jpg    1x,
+                        img/goods/good1-mobile@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 1023px)"
+                      srcset="
+                        img/goods/good1-tablet.jpg    1x,
+                        img/goods/good1-tablet@2x.jpg 2x
+                      " />
+                    <img
+                      src="img/goods/good1-desktop.jpg"
+                      srcset="img/goods/good1-desktop@2x.jpg 2x"
+                      width="350"
+                      height="650"
+                      alt="Изображение услуги."
+                  /></picture>
                 </a>
               </li>
               <li class="goods__item">
@@ -253,41 +302,56 @@
         <section class="feedback" id="feedback">
           <div class="container">
             <div class="feedback__wrapper">
-              <h2 class="feedback__title title">
-                Остались вопросы? Задайте их нам!
-              </h2>
-              <p>Мы проконсультируем Вас бесплатно</p>
-
-                <form action="https://echo.htmlacademy.ru/" method="get">
-                  <div>
-                    <label class="visually-hidden" for="name">Ваше имя</label>
-                    <input id="name" type="text" placeholder="Имя" />
-                    <label class="visually-hidden" for="phone"
-                      >Номер телефона</label
+              <div class="feedback__form-wrapper">
+                <h2 class="feedback__title title">
+                  Остались вопросы? Задайте их нам!
+                </h2>
+                <p>Мы проконсультируем Вас бесплатно</p>
+                <div class="feedback__form">
+                  <form action="https://echo.htmlacademy.ru/" method="get">
+                    <div>
+                      <label class="visually-hidden" for="name">Ваше имя</label>
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Имя"
+                        required
+                      />
+                      <label class="visually-hidden" for="phone"
+                        >Номер телефона</label
+                      >
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="Телефон"
+                        required
+                      />
+                    </div>
+                    <label class="visually-hidden" for="question"
+                      >Ваш вопрос</label
                     >
-                    <input id="phone" type="text" placeholder="Телефон" />
-                  </div>
-                  <label class="visually-hidden" for="question">Ваш вопрос</label>
-                  <textarea
-                    placeholder="Ваш вопрос"
-                    id="question"
-                    name="question"
-                    rows="4"
-                  ></textarea>
-                  <div>
-                    <button type="submit">Задать вопрос</button>
+                    <textarea
+                      placeholder="Ваш вопрос"
+                      id="question"
+                      name="question"
+                      rows="4"
+                    ></textarea>
+                    <div>
+                      <button type="submit">Задать вопрос</button>
 
-                    <label>
-                      <input type="checkbox" name="accept" checked required />
-                      <span>
-                        Я&nbsp;согласен на&nbsp;обработку персональных данных
-                      </span>
-                    </label>
-                  </div>
-                </form>
+                      <label>
+                        <input type="checkbox" name="accept" checked required />
+                        <span>
+                          Я&nbsp;согласен на&nbsp;обработку персональных данных
+                        </span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-
           </div>
         </section>
       </main>
@@ -353,6 +417,7 @@
             data-destroy="(max-width: 767px)"
           >
             <div class="footer__nav-wrapper" data-accordion="element">
+              <h3 class="footer__title">Разделы сайта</h3>
               <button
                 class="footer__accordion-button"
                 type="button"
@@ -360,7 +425,6 @@
               >
                 Разделы сайта
               </button>
-              <h3 class="footer__title">Разделы сайта</h3>
               <div data-accordion="content">
                 <nav class="footer__nav">
                   <ul class="footer__nav-list">
@@ -396,6 +460,7 @@
               </div>
             </div>
             <div class="footer__ofice-info" data-accordion="element">
+              <h3 class="footer__title">Наш офис</h3>
               <button
                 class="footer__accordion-button"
                 type="button"
@@ -403,7 +468,7 @@
               >
                 наш офис
               </button>
-              <h3 class="footer__title">Наш офис</h3>
+
               <div data-accordion="content">
                 <div class="footer__ofice-info-wrapper">
                   <address class="footer__address">
@@ -433,41 +498,60 @@
         </div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <!-- <p>
-      <a class="btn" href="#" data-open-modal="success"
-        >modal--success link</a
-      >
-    </p> -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+          <form action="https://echo.htmlacademy.ru/" method="get">
+            <div>
+              <label class="visually-hidden" for="name">Ваше имя</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Имя"
+                required
+              />
+              <label class="visually-hidden" for="phone">Номер телефона</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Телефон"
+                required
+              />
+            </div>
+            <label class="visually-hidden" for="question">Ваш вопрос</label>
+            <textarea
+              placeholder="Ваш вопрос"
+              id="question"
+              name="question"
+              rows="4"
+            ></textarea>
+            <div>
+              <button type="submit">Задать вопрос</button>
+
+              <label>
+                <input type="checkbox" name="accept" required />
+                <span>
+                  Я&nbsp;согласен на&nbsp;обработку персональных данных
+                </span>
+              </label>
+            </div>
+          </form>
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal
+          >
+            <svg width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
         </div>
       </div>
     </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

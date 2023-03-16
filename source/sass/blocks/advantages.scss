@@ -40,17 +40,17 @@
     padding: 30px 30px 56px 30px;
     min-height: 270px;
   }
-
-  @include hover {
-    color: $color-alice-blue;
-    border-color: $color-deep-sky-blue;
-    background-color: $color-deep-sky-blue;
-  }
 }
 
 .advantages__item:hover .advantages__icon,
-.advantages__item:hover .advantages__title {
+.advantages__item:hover .advantages__title,
+.advantages__item:hover .advantages__description {
   color: $color-alice-blue;
+}
+
+.advantages__item:hover {
+  background-color: $color-deep-sky-blue;
+  border: 1px solid $color-deep-sky-blue;
 }
 
 .advantages__item h3 {
