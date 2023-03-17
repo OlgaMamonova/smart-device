@@ -363,6 +363,7 @@
 
                       <label>
                         <input type="checkbox" name="accept" checked required />
+                        <span></span>
                         <p>
                           Я&nbsp;согласен на&nbsp;обработку персональных данных
                         </p>
@@ -522,50 +523,45 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <h2 class="modal__title title">Остались вопросы? Задайте их нам!</h2>
-          <p>Мы проконсультируем Вас бесплатно</p>
+          <h2>Закажите звонок</h2>
+          <p>
+            Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно
+            в&nbsp;удобное время
+          </p>
           <div class="modal__form">
             <form action="https://echo.htmlacademy.ru/" method="get">
-              <div>
-                <label class="visually-hidden" for="name">Ваше имя</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Имя"
-                  required
-                />
-                <label class="visually-hidden" for="phone"
-                  >Номер телефона</label
-                >
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="Телефон"
-                  required
-                />
-              </div>
+              <label class="visually-hidden" for="name">Ваше имя</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Имя"
+
+                required
+              />
+              <label class="visually-hidden" for="phone">Номер телефона</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Телефон"
+                required
+              />
               <label class="visually-hidden" for="question">Ваш вопрос</label>
               <textarea
                 placeholder="Ваш вопрос"
                 id="question"
                 name="question"
-                rows="4"
+                rows="5"
               ></textarea>
-              <div>
-                <button type="submit">Задать вопрос</button>
-
-                <label>
-                  <input type="checkbox" name="accept" checked required />
-                  <span>
-                    Я&nbsp;согласен на&nbsp;обработку персональных данных
-                  </span>
-                </label>
-              </div>
+              <button type="submit" data-open-modal="success">Отправить</button>
+              <label>
+                <input type="checkbox" name="accept" checked required />
+                <span></span>
+                <p>Я&nbsp;согласен на&nbsp;обработку персональных данных</p>
+              </label>
             </form>
           </div>
-
           <button
             class="modal__close-btn btn-reset"
             type="button"
@@ -579,6 +575,29 @@
         </div>
       </div>
     </div>
+    <!-- <div
+      class="modal modal--preload modal--fit-content modal--no-scale"
+      data-modal="success"
+    >
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content modal__content--success">
+          <p class="modal__description">
+            Мы обязательно свяжемся с вами в ближайшее время
+          </p>
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal
+          >
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div> -->
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

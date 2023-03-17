@@ -1211,7 +1211,6 @@ button,
 
 .feedback__button-wrapper label {
   width: 45.69%;
-  padding-left: 26px;
   position: relative;
   cursor: pointer;
 }
@@ -1234,13 +1233,13 @@ button,
   font-size: 14px;
   line-height: 15px;
   margin: 0;
+  padding-left: 26px;
 }
 
-.feedback__button-wrapper label p::before {
-  content: "";
+.feedback__button-wrapper label span {
   position: absolute;
   left: 0;
-  bottom: 10px;
+  top: 3px;
   width: 15px;
   height: 15px;
   border-radius: 2px;
@@ -1248,32 +1247,32 @@ button,
   border: 1px solid #ffffff;
 }
 
-.feedback__button-wrapper label input:checked + p::after {
+.feedback__button-wrapper label input:checked ~ p::after {
   content: url("../../img/svg/checked.svg");
   position: absolute;
   left: 3px;
-  bottom: 22px;
+  top: 3px;
   width: 7px;
   height: 5px;
 }
 
-.feedback__button-wrapper label input:hover + p::before {
+.feedback__button-wrapper label input:hover + span {
   border-color: #ebebeb;
 }
 
-.feedback__button-wrapper label input:active + p::before {
+.feedback__button-wrapper label input:active + span {
   border-color: rgba(255, 255, 255, 0.7);
 }
 
-.feedback__button-wrapper label input:hover + p {
+.feedback__button-wrapper label input:hover ~ p {
   color: #ebebeb;
 }
 
-.feedback__button-wrapper label input:active + p {
+.feedback__button-wrapper label input:active ~ p {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.feedback__button-wrapper label input:focus-visible:not(:active) + p::before {
+.feedback__button-wrapper label input:focus-visible:not(:active) + span {
   outline: 2px solid #ffffff;
   outline-offset: 3px;
 }
@@ -1544,7 +1543,7 @@ button,
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 60px 40px;
+  padding: 145px 40px;
 }
 
 .modal__overlay {
@@ -1559,8 +1558,22 @@ button,
 .modal__content {
   position: relative;
   width: 500px;
-  padding: 40px;
+  padding: 41px 40px 41px 40px;
+  margin-right: 15px;
   background-color: #00b2ff;
+}
+
+.modal__content--success {
+  padding: 70px;
+}
+
+.modal__description {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
 }
 
 .modal__close-btn {
@@ -1603,6 +1616,234 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal__content h2 {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  margin-bottom: 3px;
+}
+
+.modal__content p {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.modal__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.modal__form form input {
+  border: none;
+  background-color: #ebebeb;
+  border: 1px solid #3e9bda;
+  border-radius: 3px;
+  padding: 15px;
+  font-family: inherit;
+  color: #041827;
+  margin-bottom: 20px;
+}
+
+.modal__form form input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form input::placeholder {
+  color: #ffffff;
+}
+
+.modal__form form input:-moz-placeholder-shown {
+  background-color: #3e9bda;
+}
+
+.modal__form form input:-ms-input-placeholder {
+  background-color: #3e9bda;
+}
+
+.modal__form form input:placeholder-shown {
+  background-color: #3e9bda;
+}
+
+.modal__form form input:hover {
+  border-color: #f2f5f6;
+}
+
+.modal__form form input:focus {
+  border-color: #236490;
+  outline: none;
+}
+
+.modal__form form textarea {
+  background-color: #ebebeb;
+  border: 1px solid #3e9bda;
+  border-radius: 3px;
+  padding: 25px 15px 35px 15px;
+  font-family: inherit;
+  color: #041827;
+  margin-bottom: 25px;
+}
+
+.modal__form form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__form form textarea::placeholder {
+  color: #ffffff;
+}
+
+.modal__form form textarea:-moz-placeholder-shown {
+  background-color: #3e9bda;
+}
+
+.modal__form form textarea:-ms-input-placeholder {
+  background-color: #3e9bda;
+}
+
+.modal__form form textarea:placeholder-shown {
+  background-color: #3e9bda;
+}
+
+.modal__form form textarea:hover {
+  border-color: #f2f5f6;
+}
+
+.modal__form form textarea:focus {
+  border-color: #236490;
+  outline: none;
+}
+
+.modal__form form button {
+  display: block;
+  padding: 13px 25px;
+  margin-bottom: 22px;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #041827;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__form form button:hover {
+  opacity: 0.8;
+}
+
+.modal__form form button:active {
+  opacity: 0.6;
+}
+
+.modal__form form button:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.modal__form form label {
+  position: relative;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.modal__form form label input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.modal__form form label p {
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0;
+  padding-left: 26px;
+  color: #ffffff;
+}
+
+.modal__form form label span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+.modal__form form label input:checked ~ p::after {
+  content: url("../../img/svg/checked.svg");
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  width: 7px;
+  height: 5px;
+  z-index: 1;
+}
+
+.modal__form form label input:hover + span {
+  border-color: #ebebeb;
+}
+
+.modal__form form label input:active + span {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal__form form label input:hover ~ p {
+  color: #ebebeb;
+}
+
+.modal__form form label input:active ~ p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.modal__form form label input:focus-visible:not(:active) + span {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .custom-input,
@@ -2583,6 +2824,7 @@ button,
 
   .feedback__button-wrapper label {
     width: 100%;
+    margin-left: 4px;
   }
 
   .footer {
