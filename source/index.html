@@ -402,34 +402,36 @@
                 <div class="feedback__form">
                   <form action="https://echo.htmlacademy.ru/" method="get">
                     <div class="feedback__input-wrapper">
-                      <label class="visually-hidden" for="name">Ваше имя</label>
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Имя"
-                        required
-                      />
-                      <label class="visually-hidden" for="phone"
-                        >Номер телефона</label
-                      >
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="Телефон"
-                        required
-                      />
+                      <label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Имя"
+                          required
+                        />
+                        <span class="visually-hidden">Ваше имя</span>
+                      </label>
+                      <label>
+                        <input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          placeholder="Телефон"
+                          required
+                        />
+                        <span class="visually-hidden">Номер телефона</span>
+                      </label>
                     </div>
-                    <label class="visually-hidden" for="question"
-                      >Ваш вопрос</label
-                    >
-                    <textarea
-                      placeholder="Ваш вопрос"
-                      id="question"
-                      name="question"
-                      rows="5"
-                    ></textarea>
+                    <label>
+                      <textarea
+                        placeholder="Ваш вопрос"
+                        id="question"
+                        name="question"
+                        rows="5"
+                      ></textarea>
+                      <span class="visually-hidden">Ваш вопрос</span>
+                    </label>
                     <div class="feedback__button-wrapper">
                       <button type="submit">Задать вопрос</button>
 
@@ -602,29 +604,35 @@
           </p>
           <div class="modal__form">
             <form action="https://echo.htmlacademy.ru/" method="get">
-              <label class="visually-hidden" for="name">Ваше имя</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Имя"
-                required
-              />
-              <label class="visually-hidden" for="phone">Номер телефона</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                placeholder="Телефон"
-                required
-              />
-              <label class="visually-hidden" for="question">Ваш вопрос</label>
-              <textarea
-                placeholder="Ваш вопрос"
-                id="question"
-                name="question"
-                rows="5"
-              ></textarea>
+              <label data-focus>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Имя"
+                  required
+                />
+                <span class="visually-hidden">Ваше имя</span>
+              </label>
+              <label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Телефон"
+                  required
+                />
+                <span class="visually-hidden">Номер телефона</span>
+              </label>
+              <label>
+                <textarea
+                  placeholder="Ваш вопрос"
+                  id="question"
+                  name="question"
+                  rows="5"
+                ></textarea>
+                <span class="visually-hidden">Ваш вопрос</span>
+              </label>
               <button type="submit" data-open-modal="success">Отправить</button>
               <label>
                 <input type="checkbox" name="accept" checked required />

@@ -1074,8 +1074,8 @@ button,
   margin-bottom: 20px;
 }
 
-.feedback__input-wrapper input {
-  width: 47.76%;
+.feedback__input-wrapper label input {
+  width: 100%;
   border: none;
   background-color: #ebebeb;
   border: 1px solid #3e9bda;
@@ -1085,48 +1085,52 @@ button,
   color: #041827;
 }
 
-.feedback__input-wrapper input::-webkit-input-placeholder {
+.feedback__input-wrapper label input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__input-wrapper input::-moz-placeholder {
+.feedback__input-wrapper label input::-moz-placeholder {
   color: #ffffff;
 }
 
-.feedback__input-wrapper input:-ms-input-placeholder {
+.feedback__input-wrapper label input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__input-wrapper input::-ms-input-placeholder {
+.feedback__input-wrapper label input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__input-wrapper input::placeholder {
+.feedback__input-wrapper label input::placeholder {
   color: #ffffff;
 }
 
-.feedback__input-wrapper input:-moz-placeholder-shown {
+.feedback__input-wrapper label input:-moz-placeholder-shown {
   background-color: #3e9bda;
 }
 
-.feedback__input-wrapper input:-ms-input-placeholder {
+.feedback__input-wrapper label input:-ms-input-placeholder {
   background-color: #3e9bda;
 }
 
-.feedback__input-wrapper input:placeholder-shown {
+.feedback__input-wrapper label input:placeholder-shown {
   background-color: #3e9bda;
 }
 
-.feedback__input-wrapper input:hover {
+.feedback__input-wrapper label input:hover {
   border-color: #f2f5f6;
 }
 
-.feedback__input-wrapper input:focus {
+.feedback__input-wrapper label input:focus {
   border-color: #236490;
   outline: none;
 }
 
-.feedback__form textarea {
+.feedback__input-wrapper label {
+  width: 47.76%;
+}
+
+.feedback__form label textarea {
   width: 100%;
   background-color: #ebebeb;
   border: 1px solid #3e9bda;
@@ -1137,48 +1141,48 @@ button,
   margin-bottom: 30px;
 }
 
-.feedback__form textarea::-webkit-input-placeholder {
+.feedback__form label textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form textarea::-moz-placeholder {
+.feedback__form label textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-.feedback__form textarea:-ms-input-placeholder {
+.feedback__form label textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form textarea::-ms-input-placeholder {
+.feedback__form label textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form textarea::placeholder {
+.feedback__form label textarea::placeholder {
   color: #ffffff;
 }
 
-.feedback__form textarea:-moz-placeholder-shown {
+.feedback__form label textarea:-moz-placeholder-shown {
   background-color: #3e9bda;
 }
 
-.feedback__form textarea:-ms-input-placeholder {
+.feedback__form label textarea:-ms-input-placeholder {
   background-color: #3e9bda;
 }
 
-.feedback__form textarea:placeholder-shown {
+.feedback__form label textarea:placeholder-shown {
   background-color: #3e9bda;
 }
 
-.feedback__form textarea:hover {
+.feedback__form label textarea:hover {
   border-color: #f2f5f6;
 }
 
-.feedback__form textarea:focus {
+.feedback__form label textarea:focus {
   border-color: #236490;
   outline: none;
 }
 
-.feedback__form div button {
+.feedback__button-wrapper button {
   width: 45.69%;
   display: inline-block;
   padding: 14px 25px;
@@ -1196,15 +1200,15 @@ button,
   cursor: pointer;
 }
 
-.feedback__form div button:hover {
+.feedback__button-wrapper button:hover {
   opacity: 0.8;
 }
 
-.feedback__form div button:active {
+.feedback__button-wrapper button:active {
   opacity: 0.6;
 }
 
-.feedback__form div button:disabled {
+.feedback__button-wrapper button:disabled {
   opacity: 0.4;
   pointer-events: none;
 }
@@ -1402,6 +1406,10 @@ button,
 
 .footer__nav-link:active {
   opacity: 0.6;
+}
+
+.footer__nav-link-break--tablet {
+  display: none;
 }
 
 .footer__ofice-info {
@@ -1643,7 +1651,8 @@ button,
   flex-direction: column;
 }
 
-.modal__form form input {
+.modal__form form label input {
+  width: 100%;
   border: none;
   background-color: #ebebeb;
   border: 1px solid #3e9bda;
@@ -1651,51 +1660,56 @@ button,
   padding: 15px;
   font-family: inherit;
   color: #041827;
-  margin-bottom: 20px;
 }
 
-.modal__form form input::-webkit-input-placeholder {
+.modal__form form label input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input::-moz-placeholder {
+.modal__form form label input::-moz-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input:-ms-input-placeholder {
+.modal__form form label input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input::-ms-input-placeholder {
+.modal__form form label input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form input::placeholder {
+.modal__form form label input::placeholder {
   color: #ffffff;
 }
 
-.modal__form form input:-moz-placeholder-shown {
+.modal__form form label input:-moz-placeholder-shown {
   background-color: #3e9bda;
 }
 
-.modal__form form input:-ms-input-placeholder {
+.modal__form form label input:-ms-input-placeholder {
   background-color: #3e9bda;
 }
 
-.modal__form form input:placeholder-shown {
+.modal__form form label input:placeholder-shown {
   background-color: #3e9bda;
 }
 
-.modal__form form input:hover {
+.modal__form form label input:hover {
   border-color: #f2f5f6;
 }
 
-.modal__form form input:focus {
+.modal__form form label input:focus {
   border-color: #236490;
   outline: none;
 }
 
-.modal__form form textarea {
+.modal__form form label {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal__form form label textarea {
+  width: 100%;
   background-color: #ebebeb;
   border: 1px solid #3e9bda;
   border-radius: 3px;
@@ -1705,43 +1719,43 @@ button,
   margin-bottom: 25px;
 }
 
-.modal__form form textarea::-webkit-input-placeholder {
+.modal__form form label textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea::-moz-placeholder {
+.modal__form form label textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea:-ms-input-placeholder {
+.modal__form form label textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea::-ms-input-placeholder {
+.modal__form form label textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea::placeholder {
+.modal__form form label textarea::placeholder {
   color: #ffffff;
 }
 
-.modal__form form textarea:-moz-placeholder-shown {
+.modal__form form label textarea:-moz-placeholder-shown {
   background-color: #3e9bda;
 }
 
-.modal__form form textarea:-ms-input-placeholder {
+.modal__form form label textarea:-ms-input-placeholder {
   background-color: #3e9bda;
 }
 
-.modal__form form textarea:placeholder-shown {
+.modal__form form label textarea:placeholder-shown {
   background-color: #3e9bda;
 }
 
-.modal__form form textarea:hover {
+.modal__form form label textarea:hover {
   border-color: #f2f5f6;
 }
 
-.modal__form form textarea:focus {
+.modal__form form label textarea:focus {
   border-color: #236490;
   outline: none;
 }
@@ -2531,12 +2545,12 @@ button,
     align-items: center;
   }
 
-  .feedback__form textarea {
+  .feedback__form label textarea {
     padding: 32px 15px 28px 15px;
     margin-bottom: 31px;
   }
 
-  .feedback__form div button {
+  .feedback__button-wrapper button {
     width: 39.55%;
   }
 
@@ -2606,6 +2620,14 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .footer__nav-link-break--desktop {
+    display: none;
+  }
+
+  .footer__nav-link-break--tablet {
+    display: inline;
   }
 
   .footer__ofice-info {
@@ -2821,21 +2843,21 @@ button,
     flex-direction: column;
   }
 
-  .feedback__input-wrapper input {
+  .feedback__input-wrapper label {
     width: 100%;
   }
 
-  .feedback__input-wrapper input:not(:last-of-type) {
+  .feedback__input-wrapper label:not(:last-of-type) {
     margin-bottom: 20px;
   }
 
-  .feedback__form textarea {
+  .feedback__form label textarea {
     padding: 25px 15px;
     height: 180px;
     margin-bottom: 24px;
   }
 
-  .feedback__form div button {
+  .feedback__button-wrapper button {
     width: 100%;
     margin-bottom: 25px;
   }

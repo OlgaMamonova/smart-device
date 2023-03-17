@@ -114,8 +114,8 @@
   }
 }
 
-.feedback__input-wrapper input {
-  width: 47.76%;
+.feedback__input-wrapper label input {
+  width: 100%;
   border: none;
   background-color: $color-whisper;
   border: 1px solid $color-blue-darker;
@@ -140,6 +140,10 @@
     border-color: $color-blue-darkest;
     outline: none;
   }
+}
+
+.feedback__input-wrapper label {
+  width: 47.76%;
 
   @include vp-767 {
     width: 100%;
@@ -150,7 +154,7 @@
   }
 }
 
-.feedback__form textarea {
+.feedback__form label textarea {
   width: 100%;
   background-color: $color-whisper;
   border: 1px solid $color-blue-darker;
@@ -189,7 +193,7 @@
   }
 }
 
-.feedback__form div button {
+.feedback__button-wrapper button {
   width: 45.69%;
   display: inline-block;
   padding: 14px 25px;

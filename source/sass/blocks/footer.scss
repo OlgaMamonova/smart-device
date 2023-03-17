@@ -205,6 +205,21 @@
   }
 }
 
+.footer__nav-link-break {
+  &--desktop {
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+    @include vp-1023 {
+      display: inline;
+    }
+  }
+}
+
 .footer__ofice-info {
   padding-top: 7px;
   width: 40.82%;

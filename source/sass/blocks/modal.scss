@@ -137,7 +137,8 @@
   flex-direction: column;
 }
 
-.modal__form form input {
+.modal__form form label input {
+  width: 100%;
   border: none;
   background-color: $color-whisper;
   border: 1px solid $color-blue-darker;
@@ -145,7 +146,6 @@
   padding: 15px;
   font-family: inherit;
   color: $color-black-pearl;
-  margin-bottom: 20px;
 
   &::placeholder {
     color: $color-white;
@@ -165,7 +165,13 @@
   }
 }
 
-.modal__form form textarea {
+.modal__form form label {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal__form form label textarea {
+  width: 100%;
   background-color: $color-whisper;
   border: 1px solid $color-blue-darker;
   border-radius: 3px;
