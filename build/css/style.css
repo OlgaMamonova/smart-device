@@ -981,6 +981,14 @@ button,
   right: 28px;
 }
 
+.goods__link:hover {
+  opacity: 0.8;
+}
+
+.goods__link:active {
+  opacity: 0.6;
+}
+
 .goods__link img {
   display: block;
   position: absolute;
@@ -1066,7 +1074,7 @@ button,
   margin-bottom: 20px;
 }
 
-.feedback__form div input {
+.feedback__input-wrapper input {
   width: 47.76%;
   border: none;
   background-color: #ebebeb;
@@ -1077,43 +1085,43 @@ button,
   color: #041827;
 }
 
-.feedback__form div input::-webkit-input-placeholder {
+.feedback__input-wrapper input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form div input::-moz-placeholder {
+.feedback__input-wrapper input::-moz-placeholder {
   color: #ffffff;
 }
 
-.feedback__form div input:-ms-input-placeholder {
+.feedback__input-wrapper input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form div input::-ms-input-placeholder {
+.feedback__input-wrapper input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.feedback__form div input::placeholder {
+.feedback__input-wrapper input::placeholder {
   color: #ffffff;
 }
 
-.feedback__form div input:-moz-placeholder-shown {
+.feedback__input-wrapper input:-moz-placeholder-shown {
   background-color: #3e9bda;
 }
 
-.feedback__form div input:-ms-input-placeholder {
+.feedback__input-wrapper input:-ms-input-placeholder {
   background-color: #3e9bda;
 }
 
-.feedback__form div input:placeholder-shown {
+.feedback__input-wrapper input:placeholder-shown {
   background-color: #3e9bda;
 }
 
-.feedback__form div input:hover {
+.feedback__input-wrapper input:hover {
   border-color: #f2f5f6;
 }
 
-.feedback__form div input:focus {
+.feedback__input-wrapper input:focus {
   border-color: #236490;
   outline: none;
 }
@@ -1188,6 +1196,19 @@ button,
   cursor: pointer;
 }
 
+.feedback__form div button:hover {
+  opacity: 0.8;
+}
+
+.feedback__form div button:active {
+  opacity: 0.6;
+}
+
+.feedback__form div button:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .feedback__button-wrapper label {
   width: 45.69%;
   padding-left: 26px;
@@ -1236,13 +1257,25 @@ button,
   height: 5px;
 }
 
-.feedback__button-wrapper input:hover + p::before,
-.feedback__button-wrapper input:focus + p::before {
+.feedback__button-wrapper label input:hover + p::before {
   border-color: #ebebeb;
 }
 
-.feedback__button-wrapper input:active + p::before {
-  border-color: #f2f5f6;
+.feedback__button-wrapper label input:active + p::before {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.feedback__button-wrapper label input:hover + p {
+  color: #ebebeb;
+}
+
+.feedback__button-wrapper label input:active + p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.feedback__button-wrapper label input:focus-visible:not(:active) + p::before {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .footer {
@@ -1271,6 +1304,14 @@ button,
 .footer__logo-link {
   display: block;
   margin-bottom: 30px;
+}
+
+.footer__logo-link:hover {
+  opacity: 0.8;
+}
+
+.footer__logo-link:active {
+  opacity: 0.6;
 }
 
 .footer__title {
@@ -1315,6 +1356,14 @@ button,
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.footer__accordion-button:hover {
+  opacity: 0.8;
+}
+
+.footer__accordion-button:active {
+  opacity: 0.6;
 }
 
 .is-active .footer__accordion-button::after {
@@ -2513,11 +2562,11 @@ button,
     flex-direction: column;
   }
 
-  .feedback__form div input {
+  .feedback__input-wrapper input {
     width: 100%;
   }
 
-  .feedback__form div input:not(:last-of-type) {
+  .feedback__input-wrapper input:not(:last-of-type) {
     margin-bottom: 20px;
   }
 

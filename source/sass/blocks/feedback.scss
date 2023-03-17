@@ -114,7 +114,7 @@
   }
 }
 
-.feedback__form div input {
+.feedback__input-wrapper input {
   width: 47.76%;
   border: none;
   background-color: $color-whisper;
@@ -214,6 +214,19 @@
     width: 100%;
     margin-bottom: 25px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
 }
 
 .feedback__button-wrapper label {
@@ -233,17 +246,13 @@
 
 .feedback__button-wrapper label input[type="checkbox"] {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
-
   white-space: nowrap;
-
   border: 0;
-
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
@@ -275,11 +284,23 @@
   height: 5px;
 }
 
-.feedback__button-wrapper input:hover + p::before,
-.feedback__button-wrapper input:focus + p::before {
+.feedback__button-wrapper label input:hover + p::before {
   border-color: $color-whisper;
 }
 
-.feedback__button-wrapper input:active + p::before {
-  border-color: $color-alice-blue;
+.feedback__button-wrapper label input:active + p::before {
+  border-color: $color-white-opacity;
+}
+
+.feedback__button-wrapper label input:hover + p {
+  color: $color-whisper;
+}
+
+.feedback__button-wrapper label input:active + p {
+  color: $color-white-opacity;
+}
+
+.feedback__button-wrapper label input:focus-visible:not(:active) + p::before {
+  outline: 2px solid $color-white;
+  outline-offset: 3px;
 }

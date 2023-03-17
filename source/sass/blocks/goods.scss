@@ -98,11 +98,15 @@
       bottom: 25px;
     }
   }
-}
 
-// .goods__link:hover .goods__link::before {
-//   background-color: red;
-// }
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
 
 .goods__link img {
   display: block;
