@@ -1,7 +1,7 @@
 .feedback {
   position: relative;
   background-color: $color-deep-sky-blue;
-  padding: 170px 0 230px;
+  padding: 165px 0 228px;
   z-index: 0;
 
   &::before {
@@ -10,7 +10,7 @@
     left: 0;
     top: 0;
     display: block;
-    width: 50%;
+    width: 50.5%;
     height: 100%;
     background-color: $color-black-pearl;
     opacity: 0.5;
@@ -22,13 +22,21 @@
       height: 0;
     }
   }
+
+  @include vp-1023 {
+    padding: 43px 0 102px 0;
+  }
+
+  @include vp-767 {
+    padding: 47px 0 69px 0;
+  }
 }
 
 .feedback__wrapper {
   background-image: url("../../img/background/airplane.png");
   background-color: inherit;
   background-repeat: no-repeat;
-  background-position: 0 76px;
+  background-position: 0 81px;
   background-size: 41.8% auto;
 
   @include retina {
@@ -36,7 +44,7 @@
   }
 
   @include vp-1023 {
-    background-image: none;
+    background-size: 0 0;
   }
 }
 
@@ -49,17 +57,46 @@
   @include vp-1023 {
     width: 100%;
     min-height: fit-content;
+    padding: 0;
   }
 }
 
 .feedback__title {
   margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    letter-spacing: 0.9px;
+  }
 }
 
 .feedback__form-wrapper p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
+  margin-left: 4px;
   color: $color-white;
+
+  @include vp-1023 {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 36px;
+  }
+}
+
+.feedback__form {
+  padding-left: 5px;
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
 }
 
 .feedback__form div {
@@ -67,12 +104,20 @@
   justify-content: space-between;
   align-items: end;
   margin-bottom: 20px;
+
+  @include vp-1023 {
+    align-items: center;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .feedback__form div input {
-  width: 47.41%;
+  width: 47.76%;
   border: none;
-  background-color: $color-blue-darker;
+  background-color: $color-whisper;
   border: 1px solid $color-blue-darker;
   border-radius: 3px;
   padding: 15px;
@@ -83,54 +128,110 @@
     color: $color-white;
   }
 
+  &:placeholder-shown {
+    background-color: $color-blue-darker;
+  }
+
   &:hover {
     border-color: $color-alice-blue;
+  }
+
+  &:focus {
+    border-color: $color-blue-darkest;
+    outline: none;
+  }
+
+  @include vp-767 {
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
   }
 }
 
 .feedback__form textarea {
   width: 100%;
-  background-color: $color-blue-darker;
+  background-color: $color-whisper;
   border: 1px solid $color-blue-darker;
   border-radius: 3px;
-  padding: 25px 15px;
+  padding: 25px 15px 35px 15px;
   font-family: inherit;
   color: $color-black-pearl;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   &::placeholder {
     color: $color-white;
   }
 
+  &:placeholder-shown {
+    background-color: $color-blue-darker;
+  }
+
   &:hover {
     border-color: $color-alice-blue;
+  }
+
+  &:focus {
+    border-color: $color-blue-darkest;
+    outline: none;
+  }
+
+  @include vp-1023 {
+    padding: 32px 15px 28px 15px;
+    margin-bottom: 31px;
+  }
+
+  @include vp-767 {
+    padding: 25px 15px;
+    height: 180px;
+    margin-bottom: 24px;
   }
 }
 
 .feedback__form div button {
   width: 45.69%;
   display: inline-block;
-  padding: 17px 27px;
+  padding: 14px 25px;
   border-radius: 3px;
   color: $color-white;
   background-color: $color-black-pearl;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 18px;
   font-family: $ff-roboto-condensed;
   font-weight: 700;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
   text-align: center;
   border: none;
   cursor: pointer;
+
+  @include vp-1023 {
+    width: 39.55%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
-.feedback__form div label {
-  width: 50%;
+.feedback__button-wrapper label {
+  width: 45.69%;
   padding-left: 26px;
+  position: relative;
+  cursor: pointer;
+
+  @include vp-1023 {
+    width: 47.76%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
-.feedback__form div label input[type="checkbox"] {
+.feedback__button-wrapper label input[type="checkbox"] {
   position: absolute;
 
   width: 1px;
@@ -145,4 +246,40 @@
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.feedback__button-wrapper label p {
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: transparent;
+    border: 1px solid $color-white;
+  }
+}
+
+.feedback__button-wrapper label input:checked + p::after {
+  content: url("../../img/svg/checked.svg");
+  position: absolute;
+  left: 3px;
+  bottom: 22px;
+  width: 7px;
+  height: 5px;
+}
+
+.feedback__button-wrapper input:hover + p::before,
+.feedback__button-wrapper input:focus + p::before {
+  border-color: $color-whisper;
+}
+
+.feedback__button-wrapper input:active + p::before {
+  border-color: $color-alice-blue;
 }

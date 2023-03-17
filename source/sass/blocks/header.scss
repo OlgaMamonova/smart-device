@@ -72,7 +72,7 @@
 
 .header__contact-item {
   &:last-of-type {
-    margin-right: 25px;
+    margin-right: 0;
 
     @include vp-1023 {
       margin-right: 20px;
@@ -103,6 +103,7 @@
 
   &--phone {
     background-image: url("../../img/svg/phone.svg");
+    padding-right: 25px;
   }
 
   @include vp-1023 {

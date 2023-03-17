@@ -104,7 +104,7 @@
           <div class="container">
             <h2 class="visually-hidden">Преимущества</h2>
             <ul class="advantages__list">
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--higher">
                 <svg
                   class="advantages__icon"
                   width="35"
@@ -117,11 +117,11 @@
                 <h3 class="advantages__title">Оперативные сроки</h3>
                 <p class="advantages__description">
                   Усовершенствованная логистическая система позволяет нам
-                  просчитывать стоимость, производить и&nbsp;доставлять заказы
-                  плат и&nbsp;комплектующих в&nbsp;самые короткие сроки
+                  просчитывать стоимость, производить&nbsp;и&nbsp;доставлять
+                  заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки
                 </p>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--higher">
                 <svg
                   class="advantages__icon"
                   width="35"
@@ -151,7 +151,7 @@
                 </svg>
                 <h3 class="advantages__title">Полная конфиденциальность</h3>
                 <p class="advantages__description">
-                  По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную
+                  По&nbsp;желанию клиента&nbsp;мы обеспечиваем полную
                   конфиденциальность.
                 </p>
               </li>
@@ -239,26 +239,6 @@
                     печатных плат
                   </h3>
                   <picture>
-                    <!-- <source
-                      type="image/webp"
-                      media="(min-width: 1440px)"
-                      srcset="
-                        img/catalog/fish1000-desktop.webp    1x,
-                        img/catalog/fish1000-desktop@2x.webp 2x
-                      " />
-                    <source
-                      type="image/webp"
-                      media="(min-width: 768px)"
-                      srcset="
-                        img/catalog/fish1000-tablet.webp    1x,
-                        img/catalog/fish1000-tablet@2x.webp 2x
-                      " />
-                    <source
-                      type="image/webp"
-                      srcset="
-                        img/catalog/fish1000-mobile.webp    1x,
-                        img/catalog/fish1000-mobile@2x.webp 2x
-                      " /> -->
                     <source
                       media="(max-width: 767px)"
                       srcset="
@@ -272,8 +252,8 @@
                         img/goods/good1-tablet@2x.jpg 2x
                       " />
                     <img
-                      src="img/goods/good1-desktop.jpg"
                       srcset="img/goods/good1-desktop@2x.jpg 2x"
+                      src="img/goods/good1-desktop.jpg"
                       width="350"
                       height="650"
                       alt="Изображение услуги."
@@ -286,6 +266,26 @@
                     Монтаж<br />
                     печатных плат
                   </h3>
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        img/goods/good2-mobile.jpg    1x,
+                        img/goods/good2-mobile@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 1023px)"
+                      srcset="
+                        img/goods/good2-tablet.jpg    1x,
+                        img/goods/good2-tablet@2x.jpg 2x
+                      " />
+                    <img
+                      srcset="img/goods/good2-desktop@2x.jpg 2x"
+                      src="img/goods/good2-desktop.jpg"
+                      width="350"
+                      height="650"
+                      alt="Изображение услуги."
+                  /></picture>
                 </a>
               </li>
               <li class="goods__item">
@@ -294,6 +294,26 @@
                     Комплектующие<br />
                     для светотехники
                   </h3>
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        img/goods/good3-mobile.jpg    1x,
+                        img/goods/good3-mobile@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 1023px)"
+                      srcset="
+                        img/goods/good3-tablet.jpg    1x,
+                        img/goods/good3-tablet@2x.jpg 2x
+                      " />
+                    <img
+                      srcset="img/goods/good3-desktop@2x.jpg 2x"
+                      src="img/goods/good3-desktop.jpg"
+                      width="350"
+                      height="650"
+                      alt="Изображение услуги."
+                  /></picture>
                 </a>
               </li>
             </ul>
@@ -309,7 +329,7 @@
                 <p>Мы проконсультируем Вас бесплатно</p>
                 <div class="feedback__form">
                   <form action="https://echo.htmlacademy.ru/" method="get">
-                    <div>
+                    <div class="feedback__input-wrapper">
                       <label class="visually-hidden" for="name">Ваше имя</label>
                       <input
                         id="name"
@@ -336,16 +356,16 @@
                       placeholder="Ваш вопрос"
                       id="question"
                       name="question"
-                      rows="4"
+                      rows="5"
                     ></textarea>
-                    <div>
+                    <div class="feedback__button-wrapper">
                       <button type="submit">Задать вопрос</button>
 
                       <label>
                         <input type="checkbox" name="accept" checked required />
-                        <span>
+                        <p>
                           Я&nbsp;согласен на&nbsp;обработку персональных данных
-                        </span>
+                        </p>
                       </label>
                     </div>
                   </form>
@@ -502,43 +522,50 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <div>
-              <label class="visually-hidden" for="name">Ваше имя</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Имя"
-                required
-              />
-              <label class="visually-hidden" for="phone">Номер телефона</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                placeholder="Телефон"
-                required
-              />
-            </div>
-            <label class="visually-hidden" for="question">Ваш вопрос</label>
-            <textarea
-              placeholder="Ваш вопрос"
-              id="question"
-              name="question"
-              rows="4"
-            ></textarea>
-            <div>
-              <button type="submit">Задать вопрос</button>
+          <h2 class="modal__title title">Остались вопросы? Задайте их нам!</h2>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <div class="modal__form">
+            <form action="https://echo.htmlacademy.ru/" method="get">
+              <div>
+                <label class="visually-hidden" for="name">Ваше имя</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Имя"
+                  required
+                />
+                <label class="visually-hidden" for="phone"
+                  >Номер телефона</label
+                >
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Телефон"
+                  required
+                />
+              </div>
+              <label class="visually-hidden" for="question">Ваш вопрос</label>
+              <textarea
+                placeholder="Ваш вопрос"
+                id="question"
+                name="question"
+                rows="4"
+              ></textarea>
+              <div>
+                <button type="submit">Задать вопрос</button>
 
-              <label>
-                <input type="checkbox" name="accept" required />
-                <span>
-                  Я&nbsp;согласен на&nbsp;обработку персональных данных
-                </span>
-              </label>
-            </div>
-          </form>
+                <label>
+                  <input type="checkbox" name="accept" checked required />
+                  <span>
+                    Я&nbsp;согласен на&nbsp;обработку персональных данных
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+
           <button
             class="modal__close-btn btn-reset"
             type="button"
