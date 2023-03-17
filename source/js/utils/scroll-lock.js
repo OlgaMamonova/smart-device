@@ -45,4 +45,3 @@ export class ScrollLock {
   }
 }
 
-window.scrollLock = new ScrollLock();

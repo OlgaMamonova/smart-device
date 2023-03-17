@@ -5,9 +5,13 @@ import {scrollSmooth} from './modules/smooth-to-anchor';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {showMore} from './modules/show-more-about';
 import {FocusLock} from './utils/focus-lock';
+import {ScrollLock} from './utils/scroll-lock';
+
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  window.scrollLock = new ScrollLock();
   // Utils
   // ---------------------------------
 
@@ -15,7 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
   scrollSmooth();
   showMore();
   initAccordions();
-
   // Modules
   // ---------------------------------
 
@@ -24,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     window.focusLock = new FocusLock();
+
     const form = new Form();
     window.form = form;
     form.init();

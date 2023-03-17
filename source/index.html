@@ -24,7 +24,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header" data-fix-block>
         <div class="container">
           <div class="header__wrapper">
             <a class="header__logo-link" href="#main">
@@ -399,10 +399,10 @@
                   Остались вопросы? Задайте их нам!
                 </h2>
                 <p>Мы проконсультируем Вас бесплатно</p>
-                <div class="feedback__form">
+                <div class="feedback__form" data-form-validate>
                   <form action="https://echo.htmlacademy.ru/" method="get">
                     <div class="feedback__input-wrapper">
-                      <label>
+                      <label data-required>
                         <input
                           id="name"
                           name="name"
@@ -412,7 +412,7 @@
                         />
                         <span class="visually-hidden">Ваше имя</span>
                       </label>
-                      <label>
+                      <label data-required data-validate-type="phone">
                         <input
                           id="phone"
                           name="phone"
@@ -633,7 +633,7 @@
                 ></textarea>
                 <span class="visually-hidden">Ваш вопрос</span>
               </label>
-              <button type="submit" data-open-modal="success">Отправить</button>
+              <button type="submit">Отправить</button>
               <label>
                 <input type="checkbox" name="accept" checked required />
                 <span></span>
