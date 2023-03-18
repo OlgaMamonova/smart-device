@@ -602,7 +602,6 @@ button,
   display: inline-block;
   padding: 17px 27px;
   border-radius: 3px;
-  color: #f2f5f6;
   background-color: #00b2ff;
   color: #f2f5f6;
   font-size: 18px;
@@ -765,7 +764,6 @@ button,
 
 .header__contact-capture {
   color: #f2f5f6;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
   padding-left: 35px;
   font-family: inherit;
 }
@@ -2214,15 +2212,13 @@ button,
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0;
-    padding: 0;
     width: 100%;
     text-align: left;
-    padding: 21px 0 21px;
+    padding: 21px 0;
     cursor: pointer;
   }
 
   .footer__nav-wrapper {
-    padding-top: 0;
     width: 100%;
     margin: 0 auto;
     padding: 0 25px;

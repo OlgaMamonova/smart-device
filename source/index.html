@@ -410,7 +410,6 @@
                         class="custom-input"
                         data-validate-type="text"
                         data-limitation="name"
-                        ,
                         data-message-base="Заполните это поле"
                         data-message-extra="Некорректно заполнено поле"
                         data-required
@@ -442,7 +441,7 @@
                           placeholder="Телефон"
                           required
                         />
-                        <label class="visually-hidden" for="name"
+                        <label class="visually-hidden" for="tel"
                           >Номер телефона</label
                         >
                       </div>
@@ -644,19 +643,18 @@
                 class="custom-input"
                 data-validate-type="text"
                 data-limitation="name"
-                ,
                 data-message-base="Заполните это поле"
                 data-message-extra="Некорректно заполнено поле"
                 data-required
               >
                 <input
-                  id="name"
+                  id="modal-name"
                   name="name"
                   type="text"
                   placeholder="Имя"
                   required
                 />
-                <label class="visually-hidden" for="name">Ваше имя</label>
+                <label class="visually-hidden" for="modal-name">Ваше имя</label>
               </div>
               <div
                 class="custom-input"
@@ -668,22 +666,26 @@
                 data-required
               >
                 <input
-                  id="tel"
+                  id="modal-tel"
                   name="tel"
                   type="tel"
                   placeholder="Телефон"
                   required
                 />
-                <label class="visually-hidden" for="name">Номер телефона</label>
+                <label class="visually-hidden" for="modal-tel"
+                  >Номер телефона</label
+                >
               </div>
               <div class="custom-input">
                 <textarea
                   placeholder="Ваш вопрос"
-                  id="question"
+                  id="modal-question"
                   name="question"
                   rows="5"
                 ></textarea>
-                <label class="visually-hidden" for="question">Ваш вопрос</label>
+                <label class="visually-hidden" for="modal-question"
+                  >Ваш вопрос</label
+                >
               </div>
               <button type="submit">Задать вопрос</button>
               <div class="custom-toggle">
@@ -699,43 +701,6 @@
                 </label>
               </div>
             </form>
-            <!-- <form action="https://echo.htmlacademy.ru/" method="get">
-              <label data-focus>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Имя"
-                  required
-                />
-                <span class="visually-hidden">Ваше имя</span>
-              </label>
-              <label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="Телефон"
-                  required
-                />
-                <span class="visually-hidden">Номер телефона</span>
-              </label>
-              <label>
-                <textarea
-                  placeholder="Ваш вопрос"
-                  id="question"
-                  name="question"
-                  rows="5"
-                ></textarea>
-                <span class="visually-hidden">Ваш вопрос</span>
-              </label>
-              <button type="submit">Отправить</button>
-              <label>
-                <input type="checkbox" name="accept" checked required />
-                <span></span>
-                <p>Я&nbsp;согласен на&nbsp;обработку персональных данных</p>
-              </label>
-            </form> -->
           </div>
           <button
             class="modal__close-btn"

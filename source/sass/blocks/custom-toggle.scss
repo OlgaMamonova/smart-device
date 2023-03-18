@@ -35,9 +35,10 @@
       background-color: transparent;
       transform: translateY(-50%);
     }
+
     input:checked + .custom-toggle__icon {
       &::before {
-        content: url('../../img/svg/checked.svg');
+        content: url("../../img/svg/checked.svg");
         position: absolute;
         width: 7px;
         height: 4px;

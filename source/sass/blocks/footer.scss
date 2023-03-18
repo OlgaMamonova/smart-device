@@ -103,10 +103,9 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0;
-    padding: 0;
     width: 100%;
     text-align: left;
-    padding: 21px 0 21px;
+    padding: 21px 0;
     cursor: pointer;
   }
 
@@ -158,7 +157,6 @@
   }
 
   @include vp-767 {
-    padding-top: 0;
     width: 100%;
     margin: 0 auto;
     padding: 0 25px;
@@ -214,6 +212,7 @@
 
   &--tablet {
     display: none;
+
     @include vp-1023 {
       display: inline;
     }
