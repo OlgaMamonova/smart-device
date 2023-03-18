@@ -56,8 +56,6 @@ textarea {
 // firefox placeholder \ invalid fix + ios bdrs
 input,
 textarea {
-  border-radius: 0;
-
   &::placeholder {
     opacity: 1;
   }

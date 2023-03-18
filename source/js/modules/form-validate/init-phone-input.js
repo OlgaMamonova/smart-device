@@ -1,11 +1,10 @@
 const baseCountryCode = '+7';
-const baseMatrix = '(___) ___ __ __';
+const baseMatrix = ' (___) ___ __ __';
 const phoneLength = baseCountryCode.length + baseMatrix.length;
 
 const onPhoneInputInput = (e) => {
   const matrix = `${baseCountryCode}${baseMatrix}`;
   const def = matrix.replace(/\D/g, '');
-
   let i = 0;
   let val = e.target.value.replace(/\D/g, '');
   if (def.length >= val.length) {
@@ -48,7 +47,7 @@ const onPhoneInputPaste = (e) => {
         return;
       }
       if (e.target.value.startsWith('+8')) {
-        e.target.value = `+7${e.target.value.slice(2)}`;
+        e.target.value = `+7 ${e.target.value.slice(3)}`;
         return;
       }
       e.target.value = '';

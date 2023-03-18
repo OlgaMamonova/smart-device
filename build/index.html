@@ -399,10 +399,22 @@
                   Остались вопросы? Задайте их нам!
                 </h2>
                 <p>Мы проконсультируем Вас бесплатно</p>
-                <div class="feedback__form" data-form-validate>
+                <div
+                  class="feedback__form"
+                  data-form-validate
+                  data-callback="base"
+                >
                   <form action="https://echo.htmlacademy.ru/" method="get">
                     <div class="feedback__input-wrapper">
-                      <label data-required>
+                      <div
+                        class="custom-input"
+                        data-validate-type="text"
+                        data-limitation="name"
+                        ,
+                        data-message-base="Заполните это поле"
+                        data-message-extra="Некорректно заполнено поле"
+                        data-required
+                      >
                         <input
                           id="name"
                           name="name"
@@ -410,38 +422,62 @@
                           placeholder="Имя"
                           required
                         />
-                        <span class="visually-hidden">Ваше имя</span>
-                      </label>
-                      <label data-required data-validate-type="phone">
+                        <label class="visually-hidden" for="name"
+                          >Ваше имя</label
+                        >
+                      </div>
+                      <div
+                        class="custom-input"
+                        data-validate-type="phone"
+                        data-on-input-validate
+                        data-message-base="Заполните это поле"
+                        data-message-extra="Некорректно заполнено поле"
+                        data-message-success="Поле заполнено верно"
+                        data-required
+                      >
                         <input
-                          id="phone"
-                          name="phone"
+                          id="tel"
+                          name="tel"
                           type="tel"
                           placeholder="Телефон"
                           required
                         />
-                        <span class="visually-hidden">Номер телефона</span>
-                      </label>
+                        <label class="visually-hidden" for="name"
+                          >Номер телефона</label
+                        >
+                      </div>
                     </div>
-                    <label>
+                    <div class="custom-input">
                       <textarea
                         placeholder="Ваш вопрос"
                         id="question"
                         name="question"
                         rows="5"
                       ></textarea>
-                      <span class="visually-hidden">Ваш вопрос</span>
-                    </label>
+                      <label class="visually-hidden" for="question"
+                        >Ваш вопрос</label
+                      >
+                    </div>
                     <div class="feedback__button-wrapper">
                       <button type="submit">Задать вопрос</button>
-
-                      <label>
-                        <input type="checkbox" name="accept" checked required />
-                        <span></span>
-                        <p>
-                          Я&nbsp;согласен на&nbsp;обработку персональных данных
-                        </p>
-                      </label>
+                      <div class="custom-toggle">
+                        <label
+                          data-validate-type="checkbox"
+                          data-message-base="Дайте согласие"
+                        >
+                          <input
+                            type="checkbox"
+                            name="accept"
+                            checked
+                            required
+                          />
+                          <span class="custom-toggle__icon"></span>
+                          <span class="custom-toggle__label"
+                            >Я&nbsp;согласен на&nbsp;обработку персональных
+                            данных</span
+                          >
+                        </label>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -602,8 +638,68 @@
             Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно
             в&nbsp;удобное время
           </p>
-          <div class="modal__form">
+          <div class="modal__form" data-form-validate data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="get">
+              <div
+                class="custom-input"
+                data-validate-type="text"
+                data-limitation="name"
+                ,
+                data-message-base="Заполните это поле"
+                data-message-extra="Некорректно заполнено поле"
+                data-required
+              >
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Имя"
+                  required
+                />
+                <label class="visually-hidden" for="name">Ваше имя</label>
+              </div>
+              <div
+                class="custom-input"
+                data-validate-type="phone"
+                data-on-input-validate
+                data-message-base="Заполните это поле"
+                data-message-extra="Некорректно заполнено поле"
+                data-message-success="Поле заполнено верно"
+                data-required
+              >
+                <input
+                  id="tel"
+                  name="tel"
+                  type="tel"
+                  placeholder="Телефон"
+                  required
+                />
+                <label class="visually-hidden" for="name">Номер телефона</label>
+              </div>
+              <div class="custom-input">
+                <textarea
+                  placeholder="Ваш вопрос"
+                  id="question"
+                  name="question"
+                  rows="5"
+                ></textarea>
+                <label class="visually-hidden" for="question">Ваш вопрос</label>
+              </div>
+              <button type="submit">Задать вопрос</button>
+              <div class="custom-toggle">
+                <label
+                  data-validate-type="checkbox"
+                  data-message-base="Дайте согласие"
+                >
+                  <input type="checkbox" name="accept" checked required />
+                  <span class="custom-toggle__icon"></span>
+                  <span class="custom-toggle__label"
+                    >Я&nbsp;согласен на&nbsp;обработку персональных данных</span
+                  >
+                </label>
+              </div>
+            </form>
+            <!-- <form action="https://echo.htmlacademy.ru/" method="get">
               <label data-focus>
                 <input
                   id="name"
@@ -639,10 +735,10 @@
                 <span></span>
                 <p>Я&nbsp;согласен на&nbsp;обработку персональных данных</p>
               </label>
-            </form>
+            </form> -->
           </div>
           <button
-            class="modal__close-btn btn-reset"
+            class="modal__close-btn"
             type="button"
             aria-label="Закрыть попап"
             data-close-modal
@@ -654,29 +750,6 @@
         </div>
       </div>
     </div>
-    <!-- <div
-      class="modal modal--preload modal--fit-content modal--no-scale"
-      data-modal="success"
-    >
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content modal__content--success">
-          <p class="modal__description">
-            Мы обязательно свяжемся с вами в ближайшее время
-          </p>
-          <button
-            class="modal__close-btn btn-reset"
-            type="button"
-            aria-label="Закрыть попап"
-            data-close-modal
-          >
-            <svg width="20" height="20">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
