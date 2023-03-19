@@ -1599,7 +1599,7 @@ button,
   line-height: 16px;
   position: absolute;
   right: 0;
-  bottom: -20px;
+  top: -30px;
 }
 
 .custom-input .input-message.is-invalid {
