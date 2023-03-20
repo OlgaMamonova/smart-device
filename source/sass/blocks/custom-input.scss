@@ -13,22 +13,26 @@
 
     font-family: inherit;
     color: $color-black-pearl;
+  }
 
-    &::placeholder {
-      color: $color-white;
-    }
+  input::placeholder,
+  textarea::placeholder {
+    color: $color-white;
+  }
 
-    &:placeholder-shown {
-      background-color: $color-blue-darker;
-    }
+  input:placeholder-shown,
+  textarea:placeholder-shown {
+    background-color: $color-blue-darker;
+  }
 
-    &:hover {
-      border-color: $color-alice-blue;
-    }
+  input:hover,
+  textarea:hover {
+    border-color: $color-alice-blue;
+  }
 
-    &:focus {
-      border-color: $color-blue-darkest;
-    }
+  input:focus,
+  textarea:focus {
+    border-color: $color-blue-darkest;
   }
 
   input {
@@ -48,27 +52,27 @@
     }
   }
 
-  &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid $color-red;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-red, 0.5);
-      }
-    }
-  }
-
   .input-message {
     font-size: 14px;
     line-height: 16px;
     position: absolute;
     right: 0;
     bottom: -20px;
+  }
 
-    &.is-invalid {
-      color: $color-red;
+  .input-message.is-invalid {
+    color: $color-red;
+  }
+}
+
+.custom-input.is-invalid {
+  input,
+  textarea {
+    border: 2px solid $color-red;
+
+    &:focus,
+    &:hover {
+      border: 2px solid rgba($color-red, 0.5);
     }
   }
 }

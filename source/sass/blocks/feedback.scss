@@ -1,7 +1,7 @@
 .feedback {
   position: relative;
   background-color: $color-deep-sky-blue;
-  padding: 165px 0 228px;
+  padding: 165px 0 230px;
   z-index: 0;
 
   &::before {
@@ -33,14 +33,13 @@
 }
 
 .feedback__wrapper {
-  background-image: url("../../img/background/airplane.png");
-  background-color: inherit;
+  background-image: url("../img/background/airplane.webp");
   background-repeat: no-repeat;
-  background-position: 0 81px;
-  background-size: 41.8% auto;
+  background-position: 49px 81px;
+  background-size: 38.7% auto;
 
   @include retina {
-    background-image: url("../../img/background/airplane@2x.png");
+    background-image: url("../img/background/airplane@2x.webp");
   }
 
   @include vp-1023 {

@@ -1,103 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="сайт компании Smart Device" >
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="сайт компании Smart Device" />
     <title>Smart Device</title>
-    <link rel="stylesheet" href="css/style.min.css" >
+    <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="preload"
       href="fonts/RobotoCondensed-Bold.woff2"
       type="font/woff2"
       as="font"
       crossorigin="anonymous"
-    >
+    />
     <link
       rel="preload"
       href="fonts/PTMono-Regular.woff2"
       type="font/woff2"
       as="font"
       crossorigin="anonymous"
-    >
+    />
   </head>
   <body>
     <div class="wrapper">
       <header class="header" data-fix-block>
-        <div class="container">
-          <div class="header__wrapper">
-            <a class="header__logo-link" href="#main">
-              <picture>
-                <source
-                  media="(max-width: 767px)"
-                  srcset="img/svg/logo-mobile.svg"
-                >
-                <img
-                  class="header__logo-img"
-                  src="img/svg/logo.svg"
-                  width="215"
-                  height="55"
-                  alt="Логотип компании Smart Device."
-                >
-              </picture>
-            </a>
-            <ul class="header__contact-list">
-              <li class="header__contact-item">
-                <a
-                  class="header__contact-link header__contact-link--mail"
-                  href="mailto:info@sd.ru"
-                  aria-label="Написать нам"
-                >
-                  <span class="header__contact-capture">info@sd.ru</span>
-                </a>
-              </li>
-              <li class="header__contact-item">
-                <a
-                  class="header__contact-link header__contact-link--phone"
-                  href="tel:+74950005252"
-                  aria-label="Позвонить нам"
-                >
-                  <span class="header__contact-capture"
-                    >+7 (495) 000 52 52</span
-                  >
-                </a>
-              </li>
-            </ul>
-            <a
-              class="header__button button button--call-me"
-              href="/"
-              data-open-modal="feedback"
-            >
-              Заказать звонок
-            </a>
-          </div>
+        <div class="header__wrapper container">
+          <a class="header__logo-link" href="#main">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="img/svg/logo-mobile.svg"
+              />
+              <img
+                class="header__logo-img"
+                src="img/svg/logo.svg"
+                width="215"
+                height="55"
+                alt="Логотип компании Smart Device."
+              />
+            </picture>
+          </a>
+          <ul class="header__contact-list">
+            <li class="header__contact-item">
+              <a
+                class="header__contact-link header__contact-link--mail"
+                href="mailto:info@sd.ru"
+                aria-label="Написать нам"
+              >
+                <span class="header__contact-capture">info@sd.ru</span>
+              </a>
+            </li>
+            <li class="header__contact-item">
+              <a
+                class="header__contact-link header__contact-link--phone"
+                href="tel:+74950005252"
+                aria-label="Позвонить нам"
+              >
+                <span class="header__contact-capture">+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+          <a
+            class="header__button button button--call-me"
+            href="/"
+            data-open-modal="feedback"
+          >
+            Заказать звонок
+          </a>
         </div>
       </header>
       <main class="main" id="main">
         <section class="presentation">
-          <div class="container">
-            <div class="presentation__wrapper">
-              <h1 class="presentation__title">Печатные платы</h1>
-              <p>
-                производство и&nbsp;монтаж, поставка комплектующих, блоков
-                и&nbsp;модулей
-              </p>
-              <h2>
-                <a
-                  class="presentation__button presentation__button--desktop button"
-                  href="#feedback"
-                >
-                  Получить бесплатную консультацию
-                </a>
-                <a
-                  class="presentation__button presentation__button--mobile button focus-visible"
-                  href="#feedback"
-                >
-                  Бесплатная консультация
-                </a>
-              </h2>
-            </div>
+          <div class="container presentation__wrapper">
+            <h1>Печатные платы</h1>
+            <p>
+              производство и&nbsp;монтаж, поставка комплектующих,<br class="desktop-only"> блоков
+              и&nbsp;модулей
+            </p>
+            <a class="presentation__button button" href="#feedback">
+              <span class="mobile-hide">Получить бесплатную консультацию</span>
+              <span class="mobile-only">Бесплатная консультация</span>
+            </a>
           </div>
         </section>
         <section class="advantages">
@@ -167,7 +151,7 @@
                 </svg>
                 <h3 class="advantages__title">Персонализация стоимости</h3>
                 <p class="advantages__description">
-                  Мы&nbsp;подбираем определенную фабрику, поставщиков, вид
+                  Мы&nbsp;подбираем определенную&nbsp;фабрику, поставщиков, вид
                   доставки, чтобы установить ту&nbsp;цену, которая Вас
                   устраивает.
                 </p>
@@ -228,16 +212,12 @@
               Smart Device предлагает следующие товары и&nbsp;услуги
             </h2>
             <h2 class="goods__title goods__title--mobile title">
-              Товары и&nbsp;услуги <br >
+              Товары и&nbsp;услуги <br />
               Smart Device
             </h2>
             <ul class="goods__list">
               <li class="goods__item">
                 <a class="goods__link goods__link--production" href="#">
-                  <h3>
-                    Производство<br >
-                    печатных плат
-                  </h3>
                   <picture>
                     <source
                       type="image/webp"
@@ -245,51 +225,50 @@
                       srcset="
                         img/goods/good1-mobile.webp    1x,
                         img/goods/good1-mobile@2x.webp 2x
-                      " >
+                      " />
                     <source
                       type="image/webp"
                       media="(max-width: 1023px)"
                       srcset="
                         img/goods/good1-tablet.webp    1x,
                         img/goods/good1-tablet@2x.webp 2x
-                      " >
+                      " />
                     <source
                       type="image/webp"
                       srcset="
                         img/goods/good1-desktop.webp    1x,
                         img/goods/good1-desktop@2x.webp 2x
-                      " >
+                      " />
                     <source
                       media="(max-width: 767px)"
                       srcset="
                         img/goods/good1-mobile.jpg    1x,
                         img/goods/good1-mobile@2x.jpg 2x
-                      " >
+                      " />
                     <source
                       media="(max-width: 1023px)"
                       srcset="
                         img/goods/good1-tablet.jpg    1x,
                         img/goods/good1-tablet@2x.jpg 2x
-                      " >
+                      " />
                     <source
                       srcset="
                         img/goods/good1-descktop.jpg   1x,
                         img/goods/good1-desctop@2x.jpg 2x
-                      " >
+                      " />
                     <img
                       src="img/goods/good1-desktop.jpg"
                       width="350"
                       height="650"
-                      alt="Изображение услуги."
-                  ></picture>
+                  /></picture>
+                  <h3>
+                    Производство<br />
+                    печатных плат
+                  </h3>
                 </a>
               </li>
               <li class="goods__item">
                 <a class="goods__link goods__link--montage" href="#">
-                  <h3>
-                    Монтаж<br >
-                    печатных плат
-                  </h3>
                   <picture>
                     <source
                       type="image/webp"
@@ -297,51 +276,50 @@
                       srcset="
                         img/goods/good2-mobile.webp    1x,
                         img/goods/good2-mobile@2x.webp 2x
-                      " >
+                      " />
                     <source
                       type="image/webp"
                       media="(max-width: 1023px)"
                       srcset="
                         img/goods/good2-tablet.webp    1x,
                         img/goods/good2-tablet@2x.webp 2x
-                      " >
+                      " />
                     <source
                       type="image/webp"
                       srcset="
                         img/goods/good2-desktop.webp    1x,
                         img/goods/good2-desktop@2x.webp 2x
-                      " >
+                      " />
                     <source
                       media="(max-width: 767px)"
                       srcset="
                         img/goods/good2-mobile.jpg    1x,
                         img/goods/good2-mobile@2x.jpg 2x
-                      " >
+                      " />
                     <source
                       media="(max-width: 1023px)"
                       srcset="
                         img/goods/good2-tablet.jpg    1x,
                         img/goods/good2-tablet@2x.jpg 2x
-                      " >
+                      " />
                     <source
                       srcset="
                         img/goods/good2-descktop.jpg   1x,
                         img/goods/good2-desctop@2x.jpg 2x
-                      " >
+                      " />
                     <img
                       src="img/goods/good2-desktop.jpg"
                       width="350"
                       height="650"
-                      alt="Изображение услуги."
-                  ></picture>
+                  /></picture>
+                  <h3>
+                    Монтаж<br class="tablet-only"/>
+                    печатных<br class="desktop-only"/> плат
+                  </h3>
                 </a>
               </li>
               <li class="goods__item">
                 <a class="goods__link goods__link--details" href="#">
-                  <h3>
-                    Комплектующие<br >
-                    для светотехники
-                  </h3>
                   <picture>
                     <source
                       type="image/webp"
@@ -349,135 +327,129 @@
                       srcset="
                         img/goods/good3-mobile.webp    1x,
                         img/goods/good3-mobile@2x.webp 2x
-                      " >
+                      " />
                     <source
                       type="image/webp"
                       media="(max-width: 1023px)"
                       srcset="
                         img/goods/good3-tablet.webp    1x,
                         img/goods/good3-tablet@2x.webp 2x
-                      " >
+                      " />
                     <source
                       type="image/webp"
                       srcset="
                         img/goods/good3-desktop.webp    1x,
                         img/goods/good3-desktop@2x.webp 2x
-                      " >
+                      " />
                     <source
                       media="(max-width: 767px)"
                       srcset="
                         img/goods/good3-mobile.jpg    1x,
                         img/goods/good3-mobile@2x.jpg 2x
-                      " >
+                      " />
                     <source
                       media="(max-width: 1023px)"
                       srcset="
                         img/goods/good3-tablet.jpg    1x,
                         img/goods/good3-tablet@2x.jpg 2x
-                      " >
+                      " />
                     <source
                       srcset="
                         img/goods/good3-descktop.jpg   1x,
                         img/goods/good3-desctop@2x.jpg 2x
-                      " >
+                      " />
                     <img
                       src="img/goods/good3-desktop.jpg"
                       width="350"
                       height="650"
-                      alt="Изображение услуги."
-                  ></picture>
+                  /></picture>
+                  <h3>
+                    Комплектующие<br />
+                    для светотехники
+                  </h3>
                 </a>
               </li>
             </ul>
           </div>
         </section>
         <section class="feedback" id="feedback">
-          <div class="container">
-            <div class="feedback__wrapper">
-              <div class="feedback__form-wrapper">
-                <h2 class="feedback__title title">
-                  Остались вопросы? Задайте их нам!
-                </h2>
-                <p>Мы проконсультируем Вас бесплатно</p>
-                <div
-                  class="feedback__form"
-                  data-form-validate
-                  data-callback="base"
-                >
-                  <form action="https://echo.htmlacademy.ru/" method="get">
-                    <div class="feedback__input-wrapper">
-                      <div
-                        class="custom-input"
-                        data-validate-type="text"
-                        data-limitation="name"
-                        data-message-base="Заполните это поле"
-                        data-message-extra="Некорректно заполнено"
-                        data-required
-                      >
-                        <input
-                          id="name"
-                          name="name"
-                          type="text"
-                          placeholder="Имя"
-                          required
-                        >
-                        <label class="visually-hidden" for="name"
-                          >Ваше имя</label
-                        >
-                      </div>
-                      <div
-                        class="custom-input"
-                        data-validate-type="phone"
-                        data-message-base="Заполните это поле"
-                        data-message-extra="Некорректно заполнено"
-                        data-required
-                      >
-                        <input
-                          id="tel"
-                          name="tel"
-                          type="tel"
-                          placeholder="Телефон"
-                          required
-                        >
-                        <label class="visually-hidden" for="tel"
-                          >Номер телефона</label
-                        >
-                      </div>
+          <div class="feedback__wrapper container">
+            <div class="feedback__form-wrapper">
+              <h2 class="feedback__title title">
+                Остались вопросы? Задайте их нам!
+              </h2>
+              <p>Мы проконсультируем Вас бесплатно</p>
+              <div
+                class="feedback__form"
+                data-form-validate
+                data-callback="base"
+              >
+                <form action="https://echo.htmlacademy.ru/" method="get">
+                  <div class="feedback__input-wrapper">
+                    <div
+                      class="custom-input"
+                      data-validate-type="text"
+                      data-limitation="name"
+                      data-message-base="Заполните это поле"
+                      data-message-extra="Некорректно заполнено"
+                      data-required
+                    >
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Имя"
+                        required
+                      />
+                      <label class="visually-hidden" for="name">Ваше имя</label>
                     </div>
-                    <div class="custom-input">
-                      <textarea
-                        placeholder="Ваш вопрос"
-                        id="question"
-                        name="question"
-                        rows="5"
-                      ></textarea>
-                      <label class="visually-hidden" for="question"
-                        >Ваш вопрос</label
+                    <div
+                      class="custom-input"
+                      data-validate-type="phone"
+                      data-message-base="Заполните это поле"
+                      data-message-extra="Некорректно заполнено"
+                      data-required
+                    >
+                      <input
+                        id="tel"
+                        name="tel"
+                        type="tel"
+                        placeholder="Телефон"
+                        required
+                      />
+                      <label class="visually-hidden" for="tel"
+                        >Номер телефона</label
                       >
                     </div>
-                    <div class="feedback__button-wrapper">
-                      <button type="submit">Задать вопрос</button>
-                      <div class="custom-toggle">
-                        <label
-                          data-validate-type="checkbox"
-                          data-message-base="Дайте согласие"
+                  </div>
+                  <div class="custom-input">
+                    <textarea
+                      placeholder="Ваш вопрос"
+                      id="question"
+                      name="question"
+                      rows="5"
+                    ></textarea>
+                    <label class="visually-hidden" for="question"
+                      >Ваш вопрос</label
+                    >
+                  </div>
+                  <div class="feedback__button-wrapper">
+                    <button type="submit">Задать вопрос</button>
+                    <div class="custom-toggle">
+                      <label
+                        data-validate-type="checkbox"
+                        data-message-base="Дайте согласие"
+                      >
+                        <input type="checkbox" name="accept" checked required />
+                        <span class="custom-toggle__icon"></span>
+                        <span class="custom-toggle__label"
+                          >Я&nbsp;согласен на&nbsp;обработку персональных
+                          данных</span
                         >
-                          <input
-                            type="checkbox"
-                            name="accept"
-                            checked
-                            required
-                          >
-                          <span class="custom-toggle__icon"></span>
-                          <span class="custom-toggle__label"
-                            >Я&nbsp;согласен на&nbsp;обработку персональных
-                            данных</span
-                          >
-                        </label>
-                      </div>
+                      </label>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -494,7 +466,7 @@
                 width="215"
                 height="55"
                 alt="Логотип компании Smart Device."
-              >
+              />
             </a>
             <ul class="footer__social-list social">
               <li class="social__item">
@@ -539,7 +511,7 @@
             </ul>
           </div>
           <div
-            class="footer__info-links"
+            class="footer__info-links footer__info-links--no-js"
             data-accordion="parent"
             data-single
             data-destroy="(max-width: 767px)"
@@ -651,7 +623,7 @@
                   type="text"
                   placeholder="Имя"
                   required
-                >
+                />
                 <label class="visually-hidden" for="modal-name">Ваше имя</label>
               </div>
               <div
@@ -667,7 +639,7 @@
                   type="tel"
                   placeholder="Телефон"
                   required
-                >
+                />
                 <label class="visually-hidden" for="modal-tel"
                   >Номер телефона</label
                 >
@@ -689,7 +661,7 @@
                   data-validate-type="checkbox"
                   data-message-base="Дайте согласие"
                 >
-                  <input type="checkbox" name="accept" checked required >
+                  <input type="checkbox" name="accept" checked required />
                   <span class="custom-toggle__icon"></span>
                   <span class="custom-toggle__label"
                     >Я&nbsp;согласен на&nbsp;обработку персональных данных</span

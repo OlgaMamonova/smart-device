@@ -56,6 +56,32 @@
   transition: none !important;
 }
 
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
+.mobile-hide {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @include vp-767 {
+    display: inline-block;
+  }
+}
+
+.tablet-only {
+  display: none;
+
+  @include vp-1023 {
+    display: inline-block;
+  }
+}
+
+.desktop-only {
+  display: inline-block;
+
+  @include vp-1023 {
+    display: none;
+  }
 }

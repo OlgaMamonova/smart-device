@@ -50,7 +50,7 @@
 
 .goods__link {
   display: block;
-  padding: 50px 80px 50px 40px;
+  padding: 50px 60px 50px 40px;
   min-height: 653px;
   background-color: $color-black-pearl;
   position: relative;
@@ -82,7 +82,7 @@
   }
 
   &::after {
-    content: url("../../img/svg/arrow-right.svg");
+    content: url("../img/svg/arrow-right.svg");
     width: 3px;
     height: 8px;
     position: absolute;

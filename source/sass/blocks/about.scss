@@ -15,12 +15,12 @@
 .about__wrapper {
   min-height: 320px;
   padding-left: 20.5%;
-  background-image: url("../../img/background/2022.png");
+  background-image: url("../img/background/2022.webp");
   background-repeat: no-repeat;
   background-size: 150px 320px;
 
   @include retina {
-    background-image: url("../../img/background/2022@2x.png");
+    background-image: url("../img/background/2022@2x.webp");
   }
 
   @include vp-1023 {

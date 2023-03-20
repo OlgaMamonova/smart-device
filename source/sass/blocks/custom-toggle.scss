@@ -9,57 +9,51 @@
     padding-left: 26px;
     cursor: pointer;
     display: inline-block;
+  }
 
-    input {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 
-      clip: rect(0 0 0 0);
-    }
+    clip: rect(0 0 0 0);
+  }
 
-    span {
-      margin-bottom: 0;
-      margin-left: 0;
-    }
+  span {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
 
-    .custom-toggle__icon {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 15px;
-      height: 15px;
-      border: 1px solid $color-white;
-      border-radius: 2px;
-      background-color: transparent;
-      transform: translateY(-50%);
-    }
+  .custom-toggle__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-white;
+    border-radius: 2px;
+    background-color: transparent;
+    transform: translateY(-50%);
+  }
 
-    input:checked + .custom-toggle__icon {
-      &::before {
-        content: url("../../img/svg/checked.svg");
-        position: absolute;
-        width: 7px;
-        height: 4px;
-        left: 2px;
-        top: 0;
-        transform: translateY(-50%);
-      }
-    }
+  input:checked + .custom-toggle__icon::before {
+    content: url("../img/svg/checked.svg");
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    left: 2px;
+    top: 0;
+    transform: translateY(-50%);
   }
 
   .input-message {
     position: absolute;
     left: 0;
     bottom: -20px;
+  }
 
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
-    }
+  .input-message.is-invalid {
+    color: #ff0000;
   }
 }

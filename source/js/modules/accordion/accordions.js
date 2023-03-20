@@ -1,4 +1,5 @@
 export class Accordions {
+
   constructor() {
     this._openHeight = 0;
     this._windowWidth = window.innerWidth;

@@ -1,36 +1,36 @@
 .presentation {
-  padding: 305px 0 260px;
+  padding: 305px 0 280px;
   background-color: $color-black-pearl;
-  background-image: url("../../img/background/presentation-desktop.jpg");
+  background-image: url("../img/background/presentation-desktop.webp");
   background-repeat: no-repeat;
   background-size: cover;
 
   @include desktop-retina {
-    background-image: url("../../img/background/presentation-desktop@2x.jpg");
+    background-image: url("../img/background/presentation-desktop@2x.webp");
   }
 
   @include vp-1023 {
-    padding: 180px 0 185px;
-    background-image: url("../../img/background/presentation-tablet.jpg");
+    padding: 180px 0 205px;
+    background-image: url("../img/background/presentation-tablet.webp");
     background-position: -123px 0;
   }
 
   @include vp-1023-retina {
-    background-image: url("../../img/background/presentation-tablet@2x.jpg");
+    background-image: url("../img/background/presentation-tablet@2x.webp");
   }
 
   @include vp-767 {
-    padding: 150px 0 170px;
-    background-image: url("../../img/background/presentation-mobile.jpg");
+    padding: 150px 0 190px;
+    background-image: url("../img/background/presentation-mobile.webp");
     background-position: -229px 0;
   }
 
   @include vp-767-retina {
-    background-image: url("../../img/background/presentation-mobile@2x.jpg");
+    background-image: url("../img/background/presentation-mobile@2x.webp");
   }
 }
 
-.presentation__title {
+.presentation__wrapper h1 {
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 80px;
@@ -38,13 +38,14 @@
   text-transform: uppercase;
   letter-spacing: 5.5px;
   margin: 0;
+  margin-left: 125px;
   margin-bottom: 30px;
 
   @include vp-1023 {
     font-size: 64px;
     line-height: 75px;
     letter-spacing: 4.5px;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   @include vp-767 {
@@ -60,10 +61,11 @@
   line-height: 34px;
   margin: 0;
   margin-bottom: 48px;
-  width: 70.1%;
+  margin-left: 125px;
 
   @include vp-1023 {
     margin-bottom: 57px;
+    margin-left: 0;
     width: 100%;
   }
 
@@ -75,7 +77,7 @@
 }
 
 .presentation__wrapper {
-  width: 79.5%;
+  width: 100%;
   margin: 0 auto;
 
   @include vp-1023 {
@@ -85,6 +87,7 @@
 
 .presentation__button {
   width: fit-content;
+  margin-left: 125px;
 
   &--mobile {
     display: none;

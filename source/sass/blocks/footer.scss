@@ -112,7 +112,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 27px;
     right: 1px;
     width: 15px;
     height: 1px;
@@ -122,9 +122,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 20px;
     right: 8px;
-    transform: translateY(-50%);
     width: 1px;
     height: 15px;
     background-color: $color-alice-blue;
@@ -141,7 +140,7 @@
 }
 
 .is-active .footer__accordion-button::after {
-  transform: translateY(-50%) rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .footer__nav-wrapper {
@@ -309,4 +308,14 @@
   &:active {
     opacity: 0.6;
   }
+}
+
+.footer__info-links--no-js [data-accordion="content"] {
+  max-height: 100%;
+}
+
+.footer__info-links--no-js .footer__accordion-button::after,
+.footer__info-links--no-js .footer__accordion-button::before {
+  width: 0;
+  height: 0;
 }
