@@ -1101,7 +1101,7 @@ button,
 .feedback__button-wrapper button {
   width: 45.69%;
   display: inline-block;
-  padding: 14px 25px;
+  padding: 16px 25px 12px;
   border-radius: 3px;
   color: #ffffff;
   background-color: #041827;
@@ -1502,7 +1502,7 @@ button,
 
 .modal__form button {
   display: block;
-  padding: 13px 25px;
+  padding: 16px 25px 12px;
   margin-bottom: 22px;
   border-radius: 3px;
   color: #ffffff;
@@ -1810,7 +1810,7 @@ button,
   }
 
   .about {
-    padding: 40px 0 75px;
+    padding: 40px 0 79px;
   }
 
   .about__wrapper {
@@ -1822,7 +1822,7 @@ button,
   }
 
   .about__button {
-    margin-top: 0;
+    margin-top: -4px;
   }
 
   .goods {
@@ -2117,7 +2117,7 @@ button,
 
   .about__button {
     min-width: 57.8%;
-    margin-top: -11px;
+    margin-top: -5px;
   }
 
   .about__added-text-mobile {
@@ -2199,7 +2199,7 @@ button,
 
   .feedback__button-wrapper button {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   .feedback__button-wrapper div {
