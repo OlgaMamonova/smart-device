@@ -22,13 +22,13 @@
     &:hover + .custom-toggle__icon,
     &:hover + .custom-toggle__icon::before,
     &:hover ~ .custom-toggle__label {
-    opacity: 0.8;
+      opacity: 0.8;
     }
 
     &:active + .custom-toggle__icon,
     &:active + .custom-toggle__icon::before,
     &:active ~ .custom-toggle__label {
-    opacity: 0.6;
+      opacity: 0.6;
     }
 
     &:focus-visible + .custom-toggle__icon {
@@ -62,13 +62,6 @@
     top: 0;
     transform: translateY(-50%);
   }
-
-  // input:hover + .custom-toggle__icon,
-  // input:hover + .custom-toggle__icon::before,
-  // input:hover ~ .custom-toggle__label {
-  //   opacity: 0.1;
-  // }
-
 
   .input-message {
     position: absolute;
