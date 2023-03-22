@@ -1656,6 +1656,22 @@ button,
   clip: rect(0 0 0 0);
 }
 
+.custom-toggle input:hover + .custom-toggle__icon,
+.custom-toggle input:hover + .custom-toggle__icon::before,
+.custom-toggle input:hover ~ .custom-toggle__label {
+  opacity: 0.8;
+}
+
+.custom-toggle input:active + .custom-toggle__icon,
+.custom-toggle input:active + .custom-toggle__icon::before,
+.custom-toggle input:active ~ .custom-toggle__label {
+  opacity: 0.6;
+}
+
+.custom-toggle input:focus-visible + .custom-toggle__icon {
+  outline: 2px solid #f2f5f6;
+}
+
 .custom-toggle span {
   margin-bottom: 0;
   margin-left: 0;
