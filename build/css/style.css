@@ -1048,6 +1048,7 @@ button,
 
 .feedback__wrapper {
   background-image: url("../img/background/airplane.webp");
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: 49px 81px;
   background-size: 38.7% auto;

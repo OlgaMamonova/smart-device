@@ -376,83 +376,85 @@
           </div>
         </section>
         <section class="feedback" id="feedback">
-          <div class="feedback__wrapper container">
-            <div class="feedback__form-wrapper">
-              <h2 class="feedback__title title">
-                Остались вопросы? Задайте их нам!
-              </h2>
-              <p>Мы проконсультируем Вас бесплатно</p>
-              <div
-                class="feedback__form"
-                data-form-validate
-                data-callback="base"
-              >
-                <form action="https://echo.htmlacademy.ru/" method="get">
-                  <div class="feedback__input-wrapper">
-                    <div
-                      class="custom-input"
-                      data-validate-type="text"
-                      data-limitation="name"
-                      data-message-base="Заполните это поле"
-                      data-message-extra="Некорректно заполнено"
-                      data-required
-                    >
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Имя"
-                        required
+          <div class="container">
+            <div class="feedback__wrapper">
+              <div class="feedback__form-wrapper">
+                <h2 class="feedback__title title">
+                  Остались вопросы? Задайте их нам!
+                </h2>
+                <p>Мы проконсультируем Вас бесплатно</p>
+                <div
+                  class="feedback__form"
+                  data-form-validate
+                  data-callback="base"
+                >
+                  <form action="https://echo.htmlacademy.ru/" method="get">
+                    <div class="feedback__input-wrapper">
+                      <div
+                        class="custom-input"
+                        data-validate-type="text"
+                        data-limitation="name"
+                        data-message-base="Заполните это поле"
+                        data-message-extra="Некорректно заполнено"
+                        data-required
                       >
-                      <label class="visually-hidden" for="name">Ваше имя</label>
-                    </div>
-                    <div
-                      class="custom-input"
-                      data-validate-type="phone"
-                      data-message-base="Заполните это поле"
-                      data-message-extra="Некорректно заполнено"
-                      data-required
-                    >
-                      <input
-                        id="tel"
-                        name="tel"
-                        type="tel"
-                        placeholder="Телефон"
-                        required
-                      >
-                      <label class="visually-hidden" for="tel"
-                        >Номер телефона</label
-                      >
-                    </div>
-                  </div>
-                  <div class="custom-input">
-                    <textarea
-                      placeholder="Ваш вопрос"
-                      id="question"
-                      name="question"
-                      rows="5"
-                    ></textarea>
-                    <label class="visually-hidden" for="question"
-                      >Ваш вопрос</label
-                    >
-                  </div>
-                  <div class="feedback__button-wrapper">
-                    <button type="submit">Задать вопрос</button>
-                    <div class="custom-toggle">
-                      <label
-                        data-validate-type="checkbox"
-                        data-message-base="Дайте согласие"
-                      >
-                        <input type="checkbox" name="accept" checked required >
-                        <span class="custom-toggle__icon"></span>
-                        <span class="custom-toggle__label"
-                          >Я&nbsp;согласен на&nbsp;обработку персональных
-                          данных</span
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Имя"
+                          required
                         >
-                      </label>
+                        <label class="visually-hidden" for="name">Ваше имя</label>
+                      </div>
+                      <div
+                        class="custom-input"
+                        data-validate-type="phone"
+                        data-message-base="Заполните это поле"
+                        data-message-extra="Некорректно заполнено"
+                        data-required
+                      >
+                        <input
+                          id="tel"
+                          name="tel"
+                          type="tel"
+                          placeholder="Телефон"
+                          required
+                        >
+                        <label class="visually-hidden" for="tel"
+                          >Номер телефона</label
+                        >
+                      </div>
                     </div>
-                  </div>
-                </form>
+                    <div class="custom-input">
+                      <textarea
+                        placeholder="Ваш вопрос"
+                        id="question"
+                        name="question"
+                        rows="5"
+                      ></textarea>
+                      <label class="visually-hidden" for="question"
+                        >Ваш вопрос</label
+                      >
+                    </div>
+                    <div class="feedback__button-wrapper">
+                      <button type="submit">Задать вопрос</button>
+                      <div class="custom-toggle">
+                        <label
+                          data-validate-type="checkbox"
+                          data-message-base="Дайте согласие"
+                        >
+                          <input type="checkbox" name="accept" checked required >
+                          <span class="custom-toggle__icon"></span>
+                          <span class="custom-toggle__label"
+                            >Я&nbsp;согласен на&nbsp;обработку персональных
+                            данных</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
