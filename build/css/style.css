@@ -914,6 +914,7 @@ button,
   background-image: url("../img/background/2022.webp");
   background-repeat: no-repeat;
   background-size: 150px 320px;
+  background-color: transparent;
 }
 
 .about__title {
