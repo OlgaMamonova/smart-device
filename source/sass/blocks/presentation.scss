@@ -12,7 +12,6 @@
   @include vp-1023 {
     padding: 180px 0 205px;
     background-image: url("../img/background/presentation-tablet.webp");
-    background-position: -123px 0;
   }
 
   @include vp-1023-retina {
@@ -22,7 +21,6 @@
   @include vp-767 {
     padding: 150px 0 190px;
     background-image: url("../img/background/presentation-mobile.webp");
-    background-position: -229px 0;
   }
 
   @include vp-767-retina {

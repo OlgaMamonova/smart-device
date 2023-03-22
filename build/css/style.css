@@ -1772,7 +1772,6 @@ button,
   .presentation {
     padding: 180px 0 205px;
     background-image: url("../img/background/presentation-tablet.webp");
-    background-position: -123px 0;
   }
 
   .presentation__wrapper h1 {
@@ -2049,7 +2048,6 @@ button,
   .presentation {
     padding: 150px 0 190px;
     background-image: url("../img/background/presentation-mobile.webp");
-    background-position: -229px 0;
   }
 
   .presentation__wrapper h1 {
