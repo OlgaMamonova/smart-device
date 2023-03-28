@@ -33,24 +33,26 @@
 }
 
 .feedback__wrapper {
-  background-image: url("../img/background/airplane.webp");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 0 81px;
-  background-size: 41.8% auto;
-
-  @include retina {
-    background-image: url("../img/background/airplane@2x.webp");
-  }
+  display: grid;
+  grid-template-columns: 1fr 595px;
+  gap: 9.43%;
 
   @include vp-1023 {
-    background-size: 0 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback__airplane {
+  margin-top: 81px;
+
+  @include vp-1023 {
+    display: none;
   }
 }
 
 .feedback__form-wrapper {
-  padding: 0 10px 0 15px;
-  width: 50%;
+  padding: 0 10px 0 0;
+  width: 595px;
   margin-left: auto;
   min-height: 400px;
 

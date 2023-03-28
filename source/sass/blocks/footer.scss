@@ -195,10 +195,10 @@
   &:hover,
   &:focus {
     opacity: 0.8;
-  }
 
-  &:active {
-    opacity: 0.6;
+    @include vp-767 {
+      outline-offset: 0;
+    }
   }
 }
 
@@ -303,6 +303,10 @@
   &:hover,
   &:focus {
     opacity: 0.8;
+
+    @include vp-767 {
+      outline-offset: 0;
+    }
   }
 
   &:active {

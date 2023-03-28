@@ -598,14 +598,6 @@ button,
   transition: none;
 }
 
-[data-accordion=content] {
-  max-height: 0;
-  -webkit-transition: max-height 0.3s;
-  -o-transition: max-height 0.3s;
-  transition: max-height 0.3s;
-  overflow: hidden;
-}
-
 .button {
   display: inline-block;
   padding: 17px 27px;
@@ -1054,16 +1046,20 @@ button,
 }
 
 .feedback__wrapper {
-  background-image: url("../img/background/airplane.webp");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 0 81px;
-  background-size: 41.8% auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 595px;
+  grid-template-columns: 1fr 595px;
+  gap: 9.43%;
+}
+
+.feedback__airplane {
+  margin-top: 81px;
 }
 
 .feedback__form-wrapper {
-  padding: 0 10px 0 15px;
-  width: 50%;
+  padding: 0 10px 0 0;
+  width: 595px;
   margin-left: auto;
   min-height: 400px;
 }
@@ -1270,10 +1266,6 @@ button,
 .footer__nav-link:hover,
 .footer__nav-link:focus {
   opacity: 0.8;
-}
-
-.footer__nav-link:active {
-  opacity: 0.6;
 }
 
 .footer__nav-link-break--tablet {
@@ -1886,7 +1878,12 @@ button,
   }
 
   .feedback__wrapper {
-    background-size: 0 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .feedback__airplane {
+    display: none;
   }
 
   .feedback__form-wrapper {
@@ -2027,6 +2024,14 @@ button,
 
   .container--mobile-no {
     padding: 0;
+  }
+
+  [data-accordion=content] {
+    max-height: 0;
+    -webkit-transition: max-height 0.3s;
+    -o-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+    overflow: hidden;
   }
 
   .button {
@@ -2311,6 +2316,11 @@ button,
     line-height: 19px;
   }
 
+  .footer__nav-link:hover,
+  .footer__nav-link:focus {
+    outline-offset: 0;
+  }
+
   .footer__ofice-info {
     width: 100%;
     margin: 0 auto;
@@ -2341,6 +2351,11 @@ button,
     font-size: 14px;
   }
 
+  .footer__phone-link:hover,
+  .footer__phone-link:focus {
+    outline-offset: 0;
+  }
+
   .social {
     margin-top: 0;
     max-width: 100%;
@@ -2362,9 +2377,5 @@ button,
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .about__wrapper {
     background-image: url("../img/background/2022@2x.webp");
-  }
-
-  .feedback__wrapper {
-    background-image: url("../img/background/airplane@2x.webp");
   }
 }
