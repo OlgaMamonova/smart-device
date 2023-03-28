@@ -630,6 +630,7 @@ button,
   letter-spacing: 0.8px;
   border: 1px solid #ebebeb;
   padding: 10px 15px;
+  width: 160px;
 }
 
 .button--show-more {
@@ -711,7 +712,7 @@ button,
 
 .header__logo-link {
   display: block;
-  margin-right: 4.91%;
+  margin-right: 21px;
 }
 
 .header__logo-link:hover {
@@ -739,8 +740,8 @@ button,
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 39.94%;
-  margin-right: 3.1%;
+  width: 39.34%;
+  margin-right: 10px;
 }
 
 .header__contact-item:last-of-type {
@@ -748,7 +749,7 @@ button,
 }
 
 .header__contact-item:not(:last-of-type) {
-  margin-right: 20px;
+  margin-right: 6px;
 }
 
 .header__contact-link {
@@ -764,7 +765,7 @@ button,
 
 .header__contact-link--phone {
   background-image: url("../img/svg/phone.svg");
-  padding-right: 25px;
+  padding-right: 18px;
 }
 
 .header__contact-link:hover,
@@ -1748,6 +1749,9 @@ button,
   }
 
   .header__contact-list {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     margin-right: 0;
     margin-bottom: 0;
     width: -webkit-fit-content;
@@ -1880,6 +1884,7 @@ button,
   .feedback__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .feedback__airplane {
