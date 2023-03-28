@@ -36,8 +36,8 @@
   background-image: url("../img/background/airplane.webp");
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 49px 81px;
-  background-size: 38.7% auto;
+  background-position: 0 81px;
+  background-size: 41.8% auto;
 
   @include retina {
     background-image: url("../img/background/airplane@2x.webp");
@@ -154,6 +154,7 @@
   text-align: center;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1023 {
     width: 39.55%;

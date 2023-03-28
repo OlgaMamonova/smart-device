@@ -13,6 +13,7 @@
   text-align: center;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   @include vp-767 {
     font-size: 14px;
