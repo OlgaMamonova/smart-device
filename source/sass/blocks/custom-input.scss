@@ -6,7 +6,7 @@
   textarea {
     width: 100%;
     flex-grow: 1;
-    background-color: $color-whisper;
+    background-color: rgba($color-black-pearl-input, 0.15);
     border: 2px solid transparent;
     border-radius: 3px;
     outline: none;
@@ -18,11 +18,6 @@
   input::placeholder,
   textarea::placeholder {
     color: $color-white;
-  }
-
-  input:placeholder-shown,
-  textarea:placeholder-shown {
-    background-color: rgba($color-black-pearl-input, 0.15);
   }
 
   input:hover,

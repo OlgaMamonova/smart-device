@@ -40,7 +40,7 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 85px;
+  gap: 6.97%;
 
   @include vp-1023 {
     grid-template-columns: 1fr;
@@ -52,6 +52,7 @@
   display: block;
   padding: 50px 60px 50px 40px;
   min-height: 653px;
+  height: 100%;
   background-color: $color-black-pearl;
   position: relative;
   z-index: 0;

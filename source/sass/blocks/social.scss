@@ -5,6 +5,7 @@
   margin-left: 10px;
   display: flex;
   flex-wrap: wrap;
+  max-width: 225px;
 
   @include vp-1023 {
     max-width: 50%;
